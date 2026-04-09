@@ -1,0 +1,22 @@
+"""Request-scoped context helpers."""
+
+from __future__ import annotations
+
+from contextvars import ContextVar, Token
+
+request_id_context: ContextVar[str | None] = ContextVar("request_id", default=None)
+
+
+def set_request_id(request_id: str | None) -> Token[str | None]:
+    """Store the current request id in a context variable."""
+    return request_id_context.set(request_id)
+
+
+def get_request_id() -> str | None:
+    """Return the current request id if one is set."""
+    return request_id_context.get()
+
+
+def reset_request_id(token: Token[str | None]) -> None:
+    """Reset the request id context variable to its previous state."""
+    request_id_context.reset(token)
