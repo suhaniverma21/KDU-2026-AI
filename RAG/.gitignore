@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment and secrets
+.env
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Local storage and generated artifacts
+storage/chroma_db/
+storage/bm25/
+storage/cache/
+evaluation/outputs/
+
+# Local model/download caches
+.cache/
+hf_home/
+huggingface/
+
+# Logs
+*.log
