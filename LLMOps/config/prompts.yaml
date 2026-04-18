@@ -1,0 +1,43 @@
+prompts:
+  FAQ:
+    prompt_id: faq
+    category: FAQ
+    current_version: v2
+    fallback_version: v1
+    intended_use: Answer routine customer support questions with concise and accurate informational responses.
+    versions:
+      v1:
+        file: faq_v1.txt
+        status: fallback
+      v2:
+        file: faq_v2.txt
+        status: current
+
+  booking:
+    prompt_id: booking
+    category: booking
+    current_version: v1
+    fallback_version: v1
+    intended_use: Help customers with scheduling, rescheduling, canceling, and appointment updates.
+    versions:
+      v1:
+        file: booking_v1.txt
+        status: current
+
+  complaint:
+    prompt_id: complaint
+    category: complaint
+    current_version: v2
+    fallback_version: v1
+    intended_use: Handle complaints with empathy, escalation awareness, and careful response boundaries.
+    versions:
+      v1:
+        file: complaint_v1.txt
+        status: fallback
+      v2:
+        file: complaint_v2.txt
+        status: current
+
+default_prompt:
+  prompt_id: faq
+  version: v2

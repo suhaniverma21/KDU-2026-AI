@@ -1,0 +1,30 @@
+routing_rules:
+  FAQ:
+    low: cheap
+    medium: cheap
+    high: medium
+
+  booking:
+    low: cheap
+    medium: medium
+    high: premium
+
+  complaint:
+    low: medium
+    medium: premium
+    high: premium
+
+defaults:
+  low_confidence_tier: medium
+  unavailable_model_fallback_tier: medium
+  budget_exceeded_fallback_tier: cheap
+  unresolved_classification_tier: medium
+
+budget_guardrails:
+  warning:
+    premium_downgrade_tier: medium
+  hard_limit:
+    default_fallback_tier: cheap
+    safe_category_overrides:
+      complaint:
+        high: medium

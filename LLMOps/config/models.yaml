@@ -1,0 +1,33 @@
+models:
+  cheap:
+    provider: google_ai_studio
+    model_name: gemini-2.5-flash-lite
+    description: Low-cost Gemini tier for simple informational and routine requests.
+    max_queries_percent: 70
+    pricing_note: Estimated token pricing for local budget simulation.
+    input_cost_per_1k_tokens_usd: 0.0004
+    output_cost_per_1k_tokens_usd: 0.0016
+    timeout_seconds: 10
+    enabled: true
+
+  medium:
+    provider: google_ai_studio
+    model_name: gemini-2.5-flash
+    description: Balanced Gemini tier for booking changes and moderate reasoning tasks.
+    max_queries_percent: 20
+    pricing_note: Estimated token pricing for local budget simulation.
+    input_cost_per_1k_tokens_usd: 0.002
+    output_cost_per_1k_tokens_usd: 0.008
+    timeout_seconds: 15
+    enabled: true
+
+  premium:
+    provider: google_ai_studio
+    model_name: gemini-2.5-flash
+    description: Highest-capability Gemini tier available in the current free-tier FixIt setup.
+    max_queries_percent: 10
+    pricing_note: Estimated token pricing for local budget simulation.
+    input_cost_per_1k_tokens_usd: 0.002
+    output_cost_per_1k_tokens_usd: 0.008
+    timeout_seconds: 20
+    enabled: true

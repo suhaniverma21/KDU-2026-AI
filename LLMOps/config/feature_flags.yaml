@@ -1,0 +1,6 @@
+feature_flags:
+  enable_fallback: true
+  enable_prompt_versioning: true
+  enable_budget_guardrail: true
+  enable_request_logging: true
+  enable_low_confidence_downgrade: true

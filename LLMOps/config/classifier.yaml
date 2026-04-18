@@ -1,0 +1,26 @@
+classifier:
+  taxonomy:
+    categories:
+      - FAQ
+      - booking
+      - complaint
+    complexity_levels:
+      - low
+      - medium
+      - high
+
+  stage1:
+    direct_accept_confidence: 0.7
+    escalation_confidence_threshold: 0.6
+    minimum_rule_hits_for_direct_accept: 1
+    minimum_margin_for_direct_accept: 1
+
+  stage2:
+    enabled: true
+    model_tier: cheap
+    max_retries: 1
+
+  fallback:
+    on_llm_failure: unresolved_safe_route
+    unresolved_complexity: medium
+    unresolved_confidence: 0.0
