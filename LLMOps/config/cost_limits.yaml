@@ -1,0 +1,6 @@
+cost_limits:
+  monthly_budget_usd: 500
+  warning_threshold_usd: 400
+  hard_limit_usd: 500
+  target_average_cost_per_query_usd: 0.00167
+  premium_soft_cap_percent: 10
