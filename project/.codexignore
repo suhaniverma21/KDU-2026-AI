@@ -1,0 +1,16 @@
+# Secrets and env files
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local environments and caches
+.venv/
+__pycache__/
+*.pyc
+
+# Logs and local artifacts
+logs/
+*.log
