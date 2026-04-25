@@ -1,0 +1,88 @@
+{
+  "model": "gpt-4.1-mini",
+  "detail": "high",
+  "image_path": "c:\\Users\\Dell\\Documents\\KDU-internship\\AI\\Vision\\ChatGPT Image Apr 24, 2026, 02_56_34 PM.png",
+  "prompt": "You are a document understanding assistant.\n\nAnalyze the attached image carefully. The image may contain:\n- multiple text columns\n- one or more structured tables\n- handwritten notes that may be messy, slanted, or misspelled\n\nYour tasks:\n1. Extract every table as valid JSON.\n   - Use the visible column headers as keys.\n   - Return each row as a separate object in an array.\n   - Preserve values exactly as written.\n2. Extract multi-column printed text while preserving reading separation by column.\n   - Return each column independently as column_1, column_2, etc.\n   - Do not merge text from different columns.\n3. Extract all handwritten text separately.\n   - First transcribe exactly as written.\n   - If there are spelling mistakes, add a corrected version in brackets.\n4. Do not summarize.\n5. If something is unclear, mark it as [unclear].\n\nReturn only valid JSON in this exact structure:\n{\n  \"table\": [...],\n  \"columns\": {\n    \"column_1\": \"...\",\n    \"column_2\": \"...\"\n  },\n  \"handwritten\": {\n    \"raw\": \"...\",\n    \"corrected\": \"...\"\n  }\n}",
+  "response_id": "resp_05b3746406ab42860069eb7acb3f308197aa198b2e269c6ce2",
+  "output_text": "{\n  \"table\": [\n    {\n      \"Date\": \"01-Apr-24\",\n      \"Donor Name\": \"EcoMart\",\n      \"Category\": \"Corporate\",\n      \"Amount ($)\": \"1,500.00\",\n      \"Payment Method\": \"Bank Transfer\"\n    },\n    {\n      \"Date\": \"05-Apr-24\",\n      \"Donor Name\": \"Rahul Verma\",\n      \"Category\": \"Individual\",\n      \"Amount ($)\": \"250.00\",\n      \"Payment Method\": \"UPI\"\n    },\n    {\n      \"Date\": \"07-Apr-24\",\n      \"Donor Name\": \"Green Future Ltd.\",\n      \"Category\": \"Corporate\",\n      \"Amount ($)\": \"2,000.00\",\n      \"Payment Method\": \"Bank Transfer\"\n    },\n    {\n      \"Date\": \"12-Apr-24\",\n      \"Donor Name\": \"Sneha Patel\",\n      \"Category\": \"Individual\",\n      \"Amount ($)\": \"100.00\",\n      \"Payment Method\": \"UPI\"\n    },\n    {\n      \"Date\": \"15-Apr-24\",\n      \"Donor Name\": \"Planet Lovers Club\",\n      \"Category\": \"NGO\",\n      \"Amount ($)\": \"750.00\",\n      \"Payment Method\": \"Bank Transfer\"\n    },\n    {\n      \"Date\": \"18-Apr-24\",\n      \"Donor Name\": \"Anonymous\",\n      \"Category\": \"Individual\",\n      \"Amount ($)\": \"50.00\",\n      \"Payment Method\": \"UPI\"\n    },\n    {\n      \"Date\": \"22-Apr-24\",\n      \"Donor Name\": \"Kiran Enterprises\",\n      \"Category\": \"Corporate\",\n      \"Amount ($)\": \"3,000.00\",\n      \"Payment Method\": \"Bank Transfer\"\n    },\n    {\n      \"Date\": \"28-Apr-24\",\n      \"Donor Name\": \"Amit Joshi\",\n      \"Category\": \"Individual\",\n      \"Amount ($)\": \"200.00\",\n      \"Payment Method\": \"UPI\"\n    }\n  ],\n  \"columns\": {\n    \"column_1\": \"THE GREEN PLANET INITIATIVE 🍃\\nBuilding a Sustainable Tomorrow\\n\\nOur Mission\\nThe Green Planet Initiative is a non-profit organization dedicated to creating a sustainable future through education, community engagement, and innovative solutions. We believe that small actions can lead to big changes.\\n\\nWhat We Do\\n• Environmental Education\\n• Tree Plantation Drives\\n• Recycling Programs\\n• Community Cleanups\\n• Sustainable Living Workshops\\n\\n--------------------------------\\nGET INVOLVED\\nJoin us in making a difference! Visit our website or contact us to volunteer.\\n\\nContact Us\\n🌐 www.greenplanet.org\\n✉ info@greenplanet.org\\n📞 +1 (555) 123-4567\",\n    \"column_2\": \"A GREENER FUTURE STARTS TODAY\\nClimate change is one of the biggest challenges of our time. Rising temperatures, plastic pollution, and deforestation threaten our planet and future generations.\\n\\nTogether, we can create a cleaner, greener, and healthier world. Every action counts!\",\n    \"column_3\": \"VOLUNTEER STORIES\\n“Being part of the tree plantation drive was an amazing experience. It felt great to contribute to the environment.”\\n– Neha, Volunteer\\n\\n“I learned so much about recycling and sustainable living. These workshops changed the way I think.”\\n– Arjun, Workshop Participant\"\n  },\n  \"handwritten\": {\n    \"raw\": \"Need more volunteers for the weekend drive.\\nAsk Aman and Priya to share in their groups.\\n\\nDon't forget to call Mr. Sharma about the sponsorship!!!\\n- Riya ☺\\n\\nIdeas for Next Month:\\n1. School visit (workshop)\\n2. River clean-up drive\\n3. Plastic-free campaign ★\\n\\nTo-Do:\\n☐ Email sponsors\\n☐ Print posters\\n☐ Buy saplings\\n☐ Arrange transport\\n\\nBudget meeting on 30th April @ 4 PM\",\n    \"corrected\": \"Need more volunteers for the weekend drive.\\nAsk Aman and Priya to share in their groups.\\n\\nDon't forget to call Mr. Sharma about the sponsorship!!!\\n- Riya ☺\\n\\nIdeas for Next Month:\\n1. School visit (workshop)\\n2. River clean-up drive\\n3. Plastic-free campaign ★\\n\\nTo-Do:\\n☐ Email sponsors\\n☐ Print posters\\n☐ Buy saplings\\n☐ Arrange transport\\n\\nBudget meeting on 30th April @ 4 PM\"\n  }\n}",
+  "usage": {
+    "input_tokens": 2740,
+    "output_tokens": 961,
+    "total_tokens": 3701,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "parsed": {
+    "table": [
+      {
+        "Date": "01-Apr-24",
+        "Donor Name": "EcoMart",
+        "Category": "Corporate",
+        "Amount ($)": "1,500.00",
+        "Payment Method": "Bank Transfer"
+      },
+      {
+        "Date": "05-Apr-24",
+        "Donor Name": "Rahul Verma",
+        "Category": "Individual",
+        "Amount ($)": "250.00",
+        "Payment Method": "UPI"
+      },
+      {
+        "Date": "07-Apr-24",
+        "Donor Name": "Green Future Ltd.",
+        "Category": "Corporate",
+        "Amount ($)": "2,000.00",
+        "Payment Method": "Bank Transfer"
+      },
+      {
+        "Date": "12-Apr-24",
+        "Donor Name": "Sneha Patel",
+        "Category": "Individual",
+        "Amount ($)": "100.00",
+        "Payment Method": "UPI"
+      },
+      {
+        "Date": "15-Apr-24",
+        "Donor Name": "Planet Lovers Club",
+        "Category": "NGO",
+        "Amount ($)": "750.00",
+        "Payment Method": "Bank Transfer"
+      },
+      {
+        "Date": "18-Apr-24",
+        "Donor Name": "Anonymous",
+        "Category": "Individual",
+        "Amount ($)": "50.00",
+        "Payment Method": "UPI"
+      },
+      {
+        "Date": "22-Apr-24",
+        "Donor Name": "Kiran Enterprises",
+        "Category": "Corporate",
+        "Amount ($)": "3,000.00",
+        "Payment Method": "Bank Transfer"
+      },
+      {
+        "Date": "28-Apr-24",
+        "Donor Name": "Amit Joshi",
+        "Category": "Individual",
+        "Amount ($)": "200.00",
+        "Payment Method": "UPI"
+      }
+    ],
+    "columns": {
+      "column_1": "THE GREEN PLANET INITIATIVE 🍃\nBuilding a Sustainable Tomorrow\n\nOur Mission\nThe Green Planet Initiative is a non-profit organization dedicated to creating a sustainable future through education, community engagement, and innovative solutions. We believe that small actions can lead to big changes.\n\nWhat We Do\n• Environmental Education\n• Tree Plantation Drives\n• Recycling Programs\n• Community Cleanups\n• Sustainable Living Workshops\n\n--------------------------------\nGET INVOLVED\nJoin us in making a difference! Visit our website or contact us to volunteer.\n\nContact Us\n🌐 www.greenplanet.org\n✉ info@greenplanet.org\n📞 +1 (555) 123-4567",
+      "column_2": "A GREENER FUTURE STARTS TODAY\nClimate change is one of the biggest challenges of our time. Rising temperatures, plastic pollution, and deforestation threaten our planet and future generations.\n\nTogether, we can create a cleaner, greener, and healthier world. Every action counts!",
+      "column_3": "VOLUNTEER STORIES\n“Being part of the tree plantation drive was an amazing experience. It felt great to contribute to the environment.”\n– Neha, Volunteer\n\n“I learned so much about recycling and sustainable living. These workshops changed the way I think.”\n– Arjun, Workshop Participant"
+    },
+    "handwritten": {
+      "raw": "Need more volunteers for the weekend drive.\nAsk Aman and Priya to share in their groups.\n\nDon't forget to call Mr. Sharma about the sponsorship!!!\n- Riya ☺\n\nIdeas for Next Month:\n1. School visit (workshop)\n2. River clean-up drive\n3. Plastic-free campaign ★\n\nTo-Do:\n☐ Email sponsors\n☐ Print posters\n☐ Buy saplings\n☐ Arrange transport\n\nBudget meeting on 30th April @ 4 PM",
+      "corrected": "Need more volunteers for the weekend drive.\nAsk Aman and Priya to share in their groups.\n\nDon't forget to call Mr. Sharma about the sponsorship!!!\n- Riya ☺\n\nIdeas for Next Month:\n1. School visit (workshop)\n2. River clean-up drive\n3. Plastic-free campaign ★\n\nTo-Do:\n☐ Email sponsors\n☐ Print posters\n☐ Buy saplings\n☐ Arrange transport\n\nBudget meeting on 30th April @ 4 PM"
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "model": "gpt-4.1-mini",
+  "detail": "high",
+  "image_path": "c:\\Users\\Dell\\Documents\\KDU-internship\\AI\\Vision\\layout_image.png",
+  "prompt": "You are a spatial-analysis assistant.\n\nAnalyze the attached layout image and identify these target objects:\nsink, refrigerator, table, door\n\nFor each object:\n1. Estimate its pixel coordinates as the center point (x, y).\n2. Provide a bounding box estimate as [x_min, y_min, x_max, y_max].\n3. Give a confidence score from 0 to 1.\n4. Explain briefly if the estimate is approximate.\n\nImportant:\n- Coordinates do not need to be perfect, but they must be grounded in the image.\n- If the object is ambiguous or not visible, say so clearly.\n- Do not invent precision beyond what can be inferred visually.\n\nReturn only valid JSON in this form:\n{\n  \"objects\": [\n    {\n      \"name\": \"object name\",\n      \"center\": {\"x\": 0, \"y\": 0},\n      \"bbox\": [0, 0, 0, 0],\n      \"confidence\": 0.0,\n      \"notes\": \"...\"\n    }\n  ]\n}",
+  "response_id": "resp_019eef3d5db519890069eb8106c65481938d5568d9c15dec65",
+  "output_text": "{\n  \"objects\": [\n    {\n      \"name\": \"sink\",\n      \"center\": {\"x\": 808, \"y\": 275},\n      \"bbox\": [765, 245, 850, 300],\n      \"confidence\": 0.9,\n      \"notes\": \"Located in the kitchen area at the top center part near the window; estimate based on typical sink placement.\"\n    },\n    {\n      \"name\": \"refrigerator\",\n      \"center\": {\"x\": 880, \"y\": 327},\n      \"bbox\": [860, 290, 900, 360],\n      \"confidence\": 0.85,\n      \"notes\": \"Located to the right of the kitchen stove, fridge size and shape inferred from layout.\"\n    },\n    {\n      \"name\": \"table\",\n      \"center\": {\"x\": 710, \"y\": 490},\n      \"bbox\": [620, 425, 800, 555],\n      \"confidence\": 0.95,\n      \"notes\": \"Dining table in the living/dining area near the bottom right quadrant clearly visible.\"\n    },\n    {\n      \"name\": \"door\",\n      \"center\": {\"x\": 637, \"y\": 550},\n      \"bbox\": [615, 535, 665, 565],\n      \"confidence\": 0.9,\n      \"notes\": \"Main entrance door to the living/dining area from the porch area at bottom center identified by door arc.\"\n    }\n  ]\n}",
+  "usage": {
+    "input_tokens": 2658,
+    "output_tokens": 315,
+    "total_tokens": 2973,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "parsed": {
+    "objects": [
+      {
+        "name": "sink",
+        "center": {
+          "x": 808,
+          "y": 275
+        },
+        "bbox": [
+          765,
+          245,
+          850,
+          300
+        ],
+        "confidence": 0.9,
+        "notes": "Located in the kitchen area at the top center part near the window; estimate based on typical sink placement."
+      },
+      {
+        "name": "refrigerator",
+        "center": {
+          "x": 880,
+          "y": 327
+        },
+        "bbox": [
+          860,
+          290,
+          900,
+          360
+        ],
+        "confidence": 0.85,
+        "notes": "Located to the right of the kitchen stove, fridge size and shape inferred from layout."
+      },
+      {
+        "name": "table",
+        "center": {
+          "x": 710,
+          "y": 490
+        },
+        "bbox": [
+          620,
+          425,
+          800,
+          555
+        ],
+        "confidence": 0.95,
+        "notes": "Dining table in the living/dining area near the bottom right quadrant clearly visible."
+      },
+      {
+        "name": "door",
+        "center": {
+          "x": 637,
+          "y": 550
+        },
+        "bbox": [
+          615,
+          535,
+          665,
+          565
+        ],
+        "confidence": 0.9,
+        "notes": "Main entrance door to the living/dining area from the porch area at bottom center identified by door arc."
+      }
+    ]
+  }
+}
