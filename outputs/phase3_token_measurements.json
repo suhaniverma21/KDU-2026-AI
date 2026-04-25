@@ -1,0 +1,277 @@
+[
+  {
+    "model": "gpt-4.1-mini",
+    "detail": "low",
+    "image_path": "c:\\Users\\Dell\\Documents\\KDU-internship\\AI\\Vision\\images\\token_math\\thumbnail_320x240.png",
+    "prompt": "Inspect this image and return JSON only with these keys:\n- width_estimate\n- height_estimate\n- visible_regions\n- notes\n\nKeep the response concise. The goal is to force full image ingestion so usage is recorded.",
+    "response_id": "resp_069cf24c8fc6c81f0069eb83a447c481968d6a9283f449ac3e",
+    "output_text": "{\n  \"width_estimate\": 320,\n  \"height_estimate\": 240,\n  \"visible_regions\": [\n    \"Thumbnail area at top left\",\n    \"Three columns of text near top center\",\n    \"Table area in lower portion\",\n    \"Handwritten area in lower right inside table\"\n  ],\n  \"notes\": \"Image appears to be a sketch or wireframe with demarcated text blocks and a table outline.\"\n}",
+    "usage": {
+      "input_tokens": 184,
+      "output_tokens": 91,
+      "total_tokens": 275,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "parsed": {
+      "width_estimate": 320,
+      "height_estimate": 240,
+      "visible_regions": [
+        "Thumbnail area at top left",
+        "Three columns of text near top center",
+        "Table area in lower portion",
+        "Handwritten area in lower right inside table"
+      ],
+      "notes": "Image appears to be a sketch or wireframe with demarcated text blocks and a table outline."
+    },
+    "image_type": "thumbnail",
+    "width": 320,
+    "height": 240,
+    "pixels": 76800
+  },
+  {
+    "model": "gpt-4.1-mini",
+    "detail": "high",
+    "image_path": "c:\\Users\\Dell\\Documents\\KDU-internship\\AI\\Vision\\images\\token_math\\thumbnail_320x240.png",
+    "prompt": "Inspect this image and return JSON only with these keys:\n- width_estimate\n- height_estimate\n- visible_regions\n- notes\n\nKeep the response concise. The goal is to force full image ingestion so usage is recorded.",
+    "response_id": "resp_079f357bbead43200069eb83a7adec8193b35b1598c7368869",
+    "output_text": "{\n  \"width_estimate\": 320,\n  \"height_estimate\": 240,\n  \"visible_regions\": [\n    \"Thumbnail label at top left\",\n    \"Three columns labeled 'Column 1 text block', 'Column 2 text block', 'Column 3 text block'\",\n    \"Table area outlined near bottom left\",\n    \"Handwritten area indicated near bottom right\"\n  ],\n  \"notes\": \"Image displays a layout with text blocks and areas clearly divided by lines; dimensions align with thumbnail label.\"\n}",
+    "usage": {
+      "input_tokens": 184,
+      "output_tokens": 107,
+      "total_tokens": 291,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "parsed": {
+      "width_estimate": 320,
+      "height_estimate": 240,
+      "visible_regions": [
+        "Thumbnail label at top left",
+        "Three columns labeled 'Column 1 text block', 'Column 2 text block', 'Column 3 text block'",
+        "Table area outlined near bottom left",
+        "Handwritten area indicated near bottom right"
+      ],
+      "notes": "Image displays a layout with text blocks and areas clearly divided by lines; dimensions align with thumbnail label."
+    },
+    "image_type": "thumbnail",
+    "width": 320,
+    "height": 240,
+    "pixels": 76800
+  },
+  {
+    "model": "gpt-4.1-mini",
+    "detail": "low",
+    "image_path": "c:\\Users\\Dell\\Documents\\KDU-internship\\AI\\Vision\\images\\token_math\\1080p_1920x1080.png",
+    "prompt": "Inspect this image and return JSON only with these keys:\n- width_estimate\n- height_estimate\n- visible_regions\n- notes\n\nKeep the response concise. The goal is to force full image ingestion so usage is recorded.",
+    "response_id": "resp_0d3a9ed14f6610330069eb83ab5d648195850909914c0c32ce",
+    "output_text": "{\n  \"width_estimate\": 1920,\n  \"height_estimate\": 1080,\n  \"visible_regions\": [\n    \"Top label with image resolution\",\n    \"Three columns labeled 'Column 1 text block', 'Column 2 text block', 'Column 3 text block'\",\n    \"Horizontal dividing line under top label\",\n    \"Vertical lines separating the columns\",\n    \"Bottom large rectangular table labeled 'Table area' with a section labeled 'Handwritten area'\"\n  ],\n  \"notes\": \"Image shows a layout template with distinct columns and a table area for handwritten input designation.\"\n}",
+    "usage": {
+      "input_tokens": 2497,
+      "output_tokens": 124,
+      "total_tokens": 2621,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "parsed": {
+      "width_estimate": 1920,
+      "height_estimate": 1080,
+      "visible_regions": [
+        "Top label with image resolution",
+        "Three columns labeled 'Column 1 text block', 'Column 2 text block', 'Column 3 text block'",
+        "Horizontal dividing line under top label",
+        "Vertical lines separating the columns",
+        "Bottom large rectangular table labeled 'Table area' with a section labeled 'Handwritten area'"
+      ],
+      "notes": "Image shows a layout template with distinct columns and a table area for handwritten input designation."
+    },
+    "image_type": "1080p",
+    "width": 1920,
+    "height": 1080,
+    "pixels": 2073600
+  },
+  {
+    "model": "gpt-4.1-mini",
+    "detail": "high",
+    "image_path": "c:\\Users\\Dell\\Documents\\KDU-internship\\AI\\Vision\\images\\token_math\\1080p_1920x1080.png",
+    "prompt": "Inspect this image and return JSON only with these keys:\n- width_estimate\n- height_estimate\n- visible_regions\n- notes\n\nKeep the response concise. The goal is to force full image ingestion so usage is recorded.",
+    "response_id": "resp_05fefa9a7d2a99e70069eb83afada881968f2fa440c8338201",
+    "output_text": "{\n  \"width_estimate\": 1920,\n  \"height_estimate\": 1080,\n  \"visible_regions\": [\n    \"top horizontal line\",\n    \"three vertical lines dividing image into three columns\",\n    \"text blocks labeled 'Column 1 text block', 'Column 2 text block', 'Column 3 text block'\",\n    \"large box near bottom labeled 'Table area' and 'Handwritten area'\"\n  ],\n  \"notes\": \"Image appears to be a layout or wireframe with columns and a large table area for notes or handwriting.\"\n}",
+    "usage": {
+      "input_tokens": 2497,
+      "output_tokens": 117,
+      "total_tokens": 2614,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "parsed": {
+      "width_estimate": 1920,
+      "height_estimate": 1080,
+      "visible_regions": [
+        "top horizontal line",
+        "three vertical lines dividing image into three columns",
+        "text blocks labeled 'Column 1 text block', 'Column 2 text block', 'Column 3 text block'",
+        "large box near bottom labeled 'Table area' and 'Handwritten area'"
+      ],
+      "notes": "Image appears to be a layout or wireframe with columns and a large table area for notes or handwriting."
+    },
+    "image_type": "1080p",
+    "width": 1920,
+    "height": 1080,
+    "pixels": 2073600
+  },
+  {
+    "model": "gpt-4.1-mini",
+    "detail": "low",
+    "image_path": "c:\\Users\\Dell\\Documents\\KDU-internship\\AI\\Vision\\images\\token_math\\4k_3840x2160.png",
+    "prompt": "Inspect this image and return JSON only with these keys:\n- width_estimate\n- height_estimate\n- visible_regions\n- notes\n\nKeep the response concise. The goal is to force full image ingestion so usage is recorded.",
+    "response_id": "resp_06ea86bd1091c24f0069eb83b56a388193933b1f93faffaf83",
+    "output_text": "{\n  \"width_estimate\": 1920,\n  \"height_estimate\": 1080,\n  \"visible_regions\": [\n    \"Top-left corner: '4k - 29.84x21.0c'\",\n    \"Left side: 'Column 1 text here'\",\n    \"Center: 'Column 2 text box'\",\n    \"Right side: 'Column 3 text block'\",\n    \"Bottom center box containing: 'Title area' and a small blue text 'Functions run area'\"\n  ],\n  \"notes\": \"The image resembles a layout or wireframe for a 3-column content area with a header and a boxed footer section.\"\n}",
+    "usage": {
+      "input_tokens": 2497,
+      "output_tokens": 136,
+      "total_tokens": 2633,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "parsed": {
+      "width_estimate": 1920,
+      "height_estimate": 1080,
+      "visible_regions": [
+        "Top-left corner: '4k - 29.84x21.0c'",
+        "Left side: 'Column 1 text here'",
+        "Center: 'Column 2 text box'",
+        "Right side: 'Column 3 text block'",
+        "Bottom center box containing: 'Title area' and a small blue text 'Functions run area'"
+      ],
+      "notes": "The image resembles a layout or wireframe for a 3-column content area with a header and a boxed footer section."
+    },
+    "image_type": "4k",
+    "width": 3840,
+    "height": 2160,
+    "pixels": 8294400
+  },
+  {
+    "model": "gpt-4.1-mini",
+    "detail": "high",
+    "image_path": "c:\\Users\\Dell\\Documents\\KDU-internship\\AI\\Vision\\images\\token_math\\4k_3840x2160.png",
+    "prompt": "Inspect this image and return JSON only with these keys:\n- width_estimate\n- height_estimate\n- visible_regions\n- notes\n\nKeep the response concise. The goal is to force full image ingestion so usage is recorded.",
+    "response_id": "resp_0f47461796f7d7f50069eb83b7e7bc8194bfb5a758a08f221c",
+    "output_text": "{\n  \"width_estimate\": 1920,\n  \"height_estimate\": 1080,\n  \"visible_regions\": [\n    \"Top left corner text\",\n    \"Horizontal line near top third\",\n    \"Three vertical columns with thin dividing lines\",\n    \"Text labels in each column\",\n    \"Large centered rectangle toward lower half\",\n    \"Text inside large rectangle\"\n  ],\n  \"notes\": \"Image appears to be a wireframe or layout design with labeled regions for text and content areas.\"\n}",
+    "usage": {
+      "input_tokens": 2497,
+      "output_tokens": 104,
+      "total_tokens": 2601,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "parsed": {
+      "width_estimate": 1920,
+      "height_estimate": 1080,
+      "visible_regions": [
+        "Top left corner text",
+        "Horizontal line near top third",
+        "Three vertical columns with thin dividing lines",
+        "Text labels in each column",
+        "Large centered rectangle toward lower half",
+        "Text inside large rectangle"
+      ],
+      "notes": "Image appears to be a wireframe or layout design with labeled regions for text and content areas."
+    },
+    "image_type": "4k",
+    "width": 3840,
+    "height": 2160,
+    "pixels": 8294400
+  },
+  {
+    "model": "gpt-4.1-mini",
+    "detail": "low",
+    "image_path": "c:\\Users\\Dell\\Documents\\KDU-internship\\AI\\Vision\\images\\token_math\\large_example_4000x3000.png",
+    "prompt": "Inspect this image and return JSON only with these keys:\n- width_estimate\n- height_estimate\n- visible_regions\n- notes\n\nKeep the response concise. The goal is to force full image ingestion so usage is recorded.",
+    "response_id": "resp_0ee5669a9a3f50b90069eb83bc30848196b22277d21389a1c2",
+    "output_text": "{\n  \"width_estimate\": 4000,\n  \"height_estimate\": 3000,\n  \"visible_regions\": [\n    \"Top thin horizontal line across nearly entire width\",\n    \"Three vertical lines dividing the area below top line into three sections\",\n    \"Large rectangle in lower middle section with text inside\"\n  ],\n  \"notes\": \"Image mainly consists of lines forming a grid with sparse small text labels.\"\n}",
+    "usage": {
+      "input_tokens": 2407,
+      "output_tokens": 88,
+      "total_tokens": 2495,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "parsed": {
+      "width_estimate": 4000,
+      "height_estimate": 3000,
+      "visible_regions": [
+        "Top thin horizontal line across nearly entire width",
+        "Three vertical lines dividing the area below top line into three sections",
+        "Large rectangle in lower middle section with text inside"
+      ],
+      "notes": "Image mainly consists of lines forming a grid with sparse small text labels."
+    },
+    "image_type": "large_example",
+    "width": 4000,
+    "height": 3000,
+    "pixels": 12000000
+  },
+  {
+    "model": "gpt-4.1-mini",
+    "detail": "high",
+    "image_path": "c:\\Users\\Dell\\Documents\\KDU-internship\\AI\\Vision\\images\\token_math\\large_example_4000x3000.png",
+    "prompt": "Inspect this image and return JSON only with these keys:\n- width_estimate\n- height_estimate\n- visible_regions\n- notes\n\nKeep the response concise. The goal is to force full image ingestion so usage is recorded.",
+    "response_id": "resp_0ca5e1c8c38534250069eb83c0c92c8196a84143c7df62d460",
+    "output_text": "{\n  \"width_estimate\": 1600,\n  \"height_estimate\": 1200,\n  \"visible_regions\": [\n    \"Three vertical columns with small text at the top and near the bottom\",\n    \"Top left contains label 'kpts_amax2 : 4823x4800'\",\n    \"Bottom region contains very small text elements and partial blue colored text\",\n    \"Very sparse use of text and lines with large white empty space\"\n  ],\n  \"notes\": \"The image appears to be a sparse plot or grid with minimal visible content and significant white space. Text is very small and mostly unreadable at this scale.\"\n}",
+    "usage": {
+      "input_tokens": 2407,
+      "output_tokens": 133,
+      "total_tokens": 2540,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "parsed": {
+      "width_estimate": 1600,
+      "height_estimate": 1200,
+      "visible_regions": [
+        "Three vertical columns with small text at the top and near the bottom",
+        "Top left contains label 'kpts_amax2 : 4823x4800'",
+        "Bottom region contains very small text elements and partial blue colored text",
+        "Very sparse use of text and lines with large white empty space"
+      ],
+      "notes": "The image appears to be a sparse plot or grid with minimal visible content and significant white space. Text is very small and mostly unreadable at this scale."
+    },
+    "image_type": "large_example",
+    "width": 4000,
+    "height": 3000,
+    "pixels": 12000000
+  }
+]

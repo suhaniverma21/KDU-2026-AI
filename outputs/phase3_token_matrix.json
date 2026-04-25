@@ -1,0 +1,40 @@
+{
+  "token_math_explanation": "Token usage for input scales roughly with the megapixel count of the image, since larger images contain more pixel data to encode as tokens. For example, thumbnails at 0.077 MP use about 180-250 input tokens, while 1080p (2.074 MP) and 4K (8.294 MP) images use around 2497 input tokens. Output tokens vary less dramatically but can slightly change based on detail level. High detail prompts tend to generate more specific but sometimes fewer output tokens than low detail prompts, potentially because high detail answers are more concise or focused. Total tokens therefore increase dramatically with image size primarily due to input tokens, while differences between high and low detail affect output tokens moderately.",
+  "size_matrix": {
+    "thumbnail_320x240_0.077MP": {
+      "input_tokens": 184,
+      "output_tokens_high": 107,
+      "output_tokens_low": 91,
+      "total_tokens_high": 291,
+      "total_tokens_low": 275
+    },
+    "1080p_1920x1080_2.074MP": {
+      "input_tokens": 2497,
+      "output_tokens_high": 117,
+      "output_tokens_low": 124,
+      "total_tokens_high": 2614,
+      "total_tokens_low": 2621
+    },
+    "4K_3840x2160_8.294MP": {
+      "input_tokens": 2497,
+      "output_tokens_high": 104,
+      "output_tokens_low": 136,
+      "total_tokens_high": 2601,
+      "total_tokens_low": 2633
+    },
+    "4000x3000_12MP": {
+      "input_tokens": 2407,
+      "output_tokens_high": 133,
+      "output_tokens_low": 88,
+      "total_tokens_high": 2540,
+      "total_tokens_low": 2495
+    }
+  },
+  "preprocessing_recommendations": [
+    "Downscale images to the lowest resolution sufficient for the task before sending to reduce input token usage drastically, as input tokens scale with megapixels.",
+    "Crop images to focus on relevant content, avoiding sending large amounts of background or irrelevant pixels that increase token count unnecessarily.",
+    "Use thumbnails or low-resolution images for quick or less detailed analysis to minimize cost.",
+    "Select 'high detail' or 'low detail' mode based on the needed output granularity—if a brief summary suffices, low detail saves output tokens.",
+    "Compress or simplify images visually (e.g., reduce color depth, remove metadata) prior to API call if it does not impair recognition or analysis."
+  ]
+}

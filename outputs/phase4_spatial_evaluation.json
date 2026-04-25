@@ -1,0 +1,16 @@
+{
+  "coordinate_alignment": "No reference boxes were provided, so alignment cannot be measured exactly. The coordinates should be treated as approximate estimates.",
+  "why_llms_struggle": [
+    "Vision-language models infer spatial relationships from compressed visual representations rather than performing exact geometric measurement.",
+    "Image resizing, patching, and tokenization reduce pixel-level precision, so bounding boxes are approximate."
+  ],
+  "why_not_for_redaction": [
+    "Precise redaction needs exact pixel boundaries, while LLM vision outputs are approximate and can drift.",
+    "A small localization error can leave sensitive text partially visible, which is unacceptable for compliance or privacy workflows."
+  ],
+  "why_textract_lacks_semantics": [
+    "Textract-style OCR tools are strong at structured detection and coordinates, but they do not deeply reason about intent, meaning, or cross-region context.",
+    "They are better for deterministic extraction than for higher-level semantic interpretation."
+  ],
+  "tool_selection_guidance": "Use an LLM for semantic understanding and flexible reasoning, and use OCR/layout tools for deterministic coordinates or redaction-sensitive workflows."
+}

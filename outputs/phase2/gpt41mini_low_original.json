@@ -1,0 +1,150 @@
+{
+  "model": "gpt-4.1-mini",
+  "detail": "low",
+  "image_path": "c:\\Users\\Dell\\Documents\\KDU-internship\\AI\\Vision\\ChatGPT Image Apr 24, 2026, 02_56_34 PM.png",
+  "prompt": "You are a document understanding assistant.\n\nAnalyze the attached image carefully. The image may contain:\n- multiple text columns\n- one or more structured tables\n- handwritten notes that may be messy, slanted, or misspelled\n\nYour tasks:\n1. Extract every table as valid JSON.\n2. Extract multi-column printed text while preserving column separation.\n3. Extract handwritten text into raw and corrected fields.\n4. Return only valid JSON with keys table, columns, handwritten.",
+  "response_id": "resp_036ae82534108c5b0069eb7ba737548193bb89407629fe49fc",
+  "output_text": "{\n  \"table\": [\n    {\n      \"Date\": \"01-Apr-24\",\n      \"Donor Name\": \"EcoMart\",\n      \"Category\": \"Corporate\",\n      \"Amount ($)\": \"1,500.00\",\n      \"Payment Method\": \"Bank Transfer\"\n    },\n    {\n      \"Date\": \"05-Apr-24\",\n      \"Donor Name\": \"Rahul Verma\",\n      \"Category\": \"Individual\",\n      \"Amount ($)\": \"250.00\",\n      \"Payment Method\": \"UPI\"\n    },\n    {\n      \"Date\": \"07-Apr-24\",\n      \"Donor Name\": \"Green Future Ltd.\",\n      \"Category\": \"Corporate\",\n      \"Amount ($)\": \"2,000.00\",\n      \"Payment Method\": \"Bank Transfer\"\n    },\n    {\n      \"Date\": \"12-Apr-24\",\n      \"Donor Name\": \"Sneha Patel\",\n      \"Category\": \"Individual\",\n      \"Amount ($)\": \"100.00\",\n      \"Payment Method\": \"UPI\"\n    },\n    {\n      \"Date\": \"15-Apr-24\",\n      \"Donor Name\": \"Planet Lovers Club\",\n      \"Category\": \"NGO\",\n      \"Amount ($)\": \"750.00\",\n      \"Payment Method\": \"Bank Transfer\"\n    },\n    {\n      \"Date\": \"18-Apr-24\",\n      \"Donor Name\": \"Anonymous\",\n      \"Category\": \"Individual\",\n      \"Amount ($)\": \"50.00\",\n      \"Payment Method\": \"UPI\"\n    },\n    {\n      \"Date\": \"22-Apr-24\",\n      \"Donor Name\": \"Kiran Enterprises\",\n      \"Category\": \"Corporate\",\n      \"Amount ($)\": \"3,000.00\",\n      \"Payment Method\": \"Bank Transfer\"\n    },\n    {\n      \"Date\": \"28-Apr-24\",\n      \"Donor Name\": \"Amit Joshi\",\n      \"Category\": \"Individual\",\n      \"Amount ($)\": \"200.00\",\n      \"Payment Method\": \"UPI\"\n    }\n  ],\n  \"columns\": [\n    {\n      \"header\": \"THE GREEN PLANET INITIATIVE\",\n      \"subheader\": \"Building a Sustainable Tomorrow\",\n      \"content\": [\n        {\n          \"title\": \"Our Mission\",\n          \"text\": \"The Green Planet Initiative is a non-profit organization dedicated to creating a sustainable future through education, community engagement, and innovative solutions. We believe that small actions can lead to big changes.\"\n        },\n        {\n          \"title\": \"What We Do\",\n          \"bullet_points\": [\n            \"Environmental Education\",\n            \"Tree Plantation Drives\",\n            \"Recycling Programs\",\n            \"Community Cleanups\",\n            \"Sustainable Living Workshops\"\n          ]\n        },\n        {\n          \"title\": \"GET INVOLVED\",\n          \"text\": \"Join us in making a difference! Visit our website or contact us to volunteer.\"\n        },\n        {\n          \"title\": \"Contact Us\",\n          \"details\": [\n            \"www.greenplanet.org\",\n            \"info@greenplanet.org\",\n            \"+1 (555) 123-4567\"\n          ]\n        }\n      ]\n    },\n    {\n      \"header\": \"A GREENER FUTURE STARTS TODAY\",\n      \"content\": [\n        \"Climate change is one of the biggest challenges of our time. Rising temperatures, plastic pollution, and deforestation threaten our planet and future generations.\",\n        \"Together, we can create a cleaner, greener, and healthier world. Every action counts!\"\n      ]\n    },\n    {\n      \"header\": \"VOLUNTEER STORIES\",\n      \"content\": [\n        \"“Being part of the tree plantation drive was an amazing experience. It felt great to contribute to the environment.” – Neha, Volunteer\",\n        \"“I learned so much about recycling and sustainable living. These workshops changed the way I think.” – Arjun, Workshop Participant\"\n      ]\n    }\n  ],\n  \"handwritten\": [\n    {\n      \"raw\": \"Need more volunteers for the weekend drive. Ask Aman and Priya to share in their groups.\",\n      \"corrected\": \"Need more volunteers for the weekend drive. Ask Aman and Priya to share in their groups.\"\n    },\n    {\n      \"raw\": \"Don't forget to call Mr. Sharma about the sponsorship!!! - Riya :)\",\n      \"corrected\": \"Don't forget to call Mr. Sharma about the sponsorship!!! - Riya :)\"\n    },\n    {\n      \"raw\": \"Ideas for Next Month:\\n1. School visit (workshop)\\n2. River clean-up drive\\n3. Plastic-free campaign ⭐\",\n      \"corrected\": \"Ideas for Next Month:\\n1. School visit (workshop)\\n2. River clean-up drive\\n3. Plastic-free campaign\"\n    },\n    {\n      \"raw\": \"To-Do:\\n☐ Email sponsors\\n☐ Print posters\\n☐ Buy saplings\\n☐ Arrange transport\",\n      \"corrected\": \"To-Do:\\n☐ Email sponsors\\n☐ Print posters\\n☐ Buy saplings\\n☐ Arrange transport\"\n    },\n    {\n      \"raw\": \"Budget meeting on 30th April @ 4 PM\",\n      \"corrected\": \"Budget meeting on 30th April @ 4 PM\"\n    }\n  ]\n}",
+  "usage": {
+    "input_tokens": 2592,
+    "output_tokens": 1092,
+    "total_tokens": 3684,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "parsed": {
+    "table": [
+      {
+        "Date": "01-Apr-24",
+        "Donor Name": "EcoMart",
+        "Category": "Corporate",
+        "Amount ($)": "1,500.00",
+        "Payment Method": "Bank Transfer"
+      },
+      {
+        "Date": "05-Apr-24",
+        "Donor Name": "Rahul Verma",
+        "Category": "Individual",
+        "Amount ($)": "250.00",
+        "Payment Method": "UPI"
+      },
+      {
+        "Date": "07-Apr-24",
+        "Donor Name": "Green Future Ltd.",
+        "Category": "Corporate",
+        "Amount ($)": "2,000.00",
+        "Payment Method": "Bank Transfer"
+      },
+      {
+        "Date": "12-Apr-24",
+        "Donor Name": "Sneha Patel",
+        "Category": "Individual",
+        "Amount ($)": "100.00",
+        "Payment Method": "UPI"
+      },
+      {
+        "Date": "15-Apr-24",
+        "Donor Name": "Planet Lovers Club",
+        "Category": "NGO",
+        "Amount ($)": "750.00",
+        "Payment Method": "Bank Transfer"
+      },
+      {
+        "Date": "18-Apr-24",
+        "Donor Name": "Anonymous",
+        "Category": "Individual",
+        "Amount ($)": "50.00",
+        "Payment Method": "UPI"
+      },
+      {
+        "Date": "22-Apr-24",
+        "Donor Name": "Kiran Enterprises",
+        "Category": "Corporate",
+        "Amount ($)": "3,000.00",
+        "Payment Method": "Bank Transfer"
+      },
+      {
+        "Date": "28-Apr-24",
+        "Donor Name": "Amit Joshi",
+        "Category": "Individual",
+        "Amount ($)": "200.00",
+        "Payment Method": "UPI"
+      }
+    ],
+    "columns": [
+      {
+        "header": "THE GREEN PLANET INITIATIVE",
+        "subheader": "Building a Sustainable Tomorrow",
+        "content": [
+          {
+            "title": "Our Mission",
+            "text": "The Green Planet Initiative is a non-profit organization dedicated to creating a sustainable future through education, community engagement, and innovative solutions. We believe that small actions can lead to big changes."
+          },
+          {
+            "title": "What We Do",
+            "bullet_points": [
+              "Environmental Education",
+              "Tree Plantation Drives",
+              "Recycling Programs",
+              "Community Cleanups",
+              "Sustainable Living Workshops"
+            ]
+          },
+          {
+            "title": "GET INVOLVED",
+            "text": "Join us in making a difference! Visit our website or contact us to volunteer."
+          },
+          {
+            "title": "Contact Us",
+            "details": [
+              "www.greenplanet.org",
+              "info@greenplanet.org",
+              "+1 (555) 123-4567"
+            ]
+          }
+        ]
+      },
+      {
+        "header": "A GREENER FUTURE STARTS TODAY",
+        "content": [
+          "Climate change is one of the biggest challenges of our time. Rising temperatures, plastic pollution, and deforestation threaten our planet and future generations.",
+          "Together, we can create a cleaner, greener, and healthier world. Every action counts!"
+        ]
+      },
+      {
+        "header": "VOLUNTEER STORIES",
+        "content": [
+          "“Being part of the tree plantation drive was an amazing experience. It felt great to contribute to the environment.” – Neha, Volunteer",
+          "“I learned so much about recycling and sustainable living. These workshops changed the way I think.” – Arjun, Workshop Participant"
+        ]
+      }
+    ],
+    "handwritten": [
+      {
+        "raw": "Need more volunteers for the weekend drive. Ask Aman and Priya to share in their groups.",
+        "corrected": "Need more volunteers for the weekend drive. Ask Aman and Priya to share in their groups."
+      },
+      {
+        "raw": "Don't forget to call Mr. Sharma about the sponsorship!!! - Riya :)",
+        "corrected": "Don't forget to call Mr. Sharma about the sponsorship!!! - Riya :)"
+      },
+      {
+        "raw": "Ideas for Next Month:\n1. School visit (workshop)\n2. River clean-up drive\n3. Plastic-free campaign ⭐",
+        "corrected": "Ideas for Next Month:\n1. School visit (workshop)\n2. River clean-up drive\n3. Plastic-free campaign"
+      },
+      {
+        "raw": "To-Do:\n☐ Email sponsors\n☐ Print posters\n☐ Buy saplings\n☐ Arrange transport",
+        "corrected": "To-Do:\n☐ Email sponsors\n☐ Print posters\n☐ Buy saplings\n☐ Arrange transport"
+      },
+      {
+        "raw": "Budget meeting on 30th April @ 4 PM",
+        "corrected": "Budget meeting on 30th April @ 4 PM"
+      }
+    ]
+  },
+  "run_id": "gpt41mini_low_original"
+}
