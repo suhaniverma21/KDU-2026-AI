@@ -1,0 +1,14 @@
+openai
+transformers
+torch
+torchvision
+pydub
+pdfplumber
+pdf2image
+Pillow
+chromadb
+rank_bm25
+langchain-text-splitters
+tiktoken
+streamlit
+python-dotenv
