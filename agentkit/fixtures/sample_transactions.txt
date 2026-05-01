@@ -1,0 +1,20 @@
+Customer Name: Jane Doe
+Transaction ID: TXN-10045
+Order ID: ORD-77881
+Amount: $249.99
+Currency: USD
+Date: 2026-04-30
+Routing Number: 123456789
+Account Number: 987654321
+
+Transaction ID: TXN-10046
+Order ID: ORD-77882
+Amount: $19.95
+Currency: USD
+Date: 2026-05-01
+Routing Number: 123456789
+Account Number: 987654321
+
+This transactional record captures settlement details, item mapping, approval trace, and
+reconciliation annotations for archival review. This transactional record captures settlement
+details, item mapping, approval trace, and reconciliation annotations for archival review.
