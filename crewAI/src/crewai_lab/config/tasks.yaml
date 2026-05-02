@@ -1,0 +1,28 @@
+research_task:
+  description: >
+    Research the topic "{topic}" for an internal R&D briefing. Use available tools to gather
+    current facts, notable trends, concrete examples, and explicit uncertainty. If a tool fails,
+    record the failure and continue with the remaining evidence.
+  expected_output: >
+    A compact research brief with bullet points for key findings, source-backed observations,
+    open questions, and a short note describing any tool failures encountered.
+  agent: researcher
+
+fact_check_task:
+  description: >
+    Review the research brief for "{topic}". Validate the claims, flag unsupported or weakly
+    supported statements, and note how any tool failure affects confidence in the research.
+  expected_output: >
+    A fact-check report with sections for confirmed claims, questionable claims, missing evidence,
+    and a final confidence assessment.
+  agent: fact_checker
+
+write_report_task:
+  description: >
+    Produce a final internal summary for "{topic}" using the fact-check output. Keep the report
+    concise, decision-friendly, and explicit about confidence levels and missing evidence. Do not
+    use persuasive language, speculation, emotional framing, or unsupported recommendations.
+  expected_output: >
+    A strictly neutral report with an executive summary, validated findings, caveats, and a short
+    next-steps section based only on confirmed evidence.
+  agent: writer
