@@ -1,0 +1,14 @@
+{
+  "response": "The last 4 digits of your SSN are ***-**-6789.",
+  "used_backend_data": true,
+  "model": "gpt-4o-mini",
+  "llm_latency_ms": 3250.098,
+  "blocked": false,
+  "guardrail_reason": "Modified by NeMo output rails",
+  "guardrails_backend": "nemo-guardrails",
+  "input_guardrail_ms": 1.186,
+  "output_guardrail_ms": 1.494,
+  "trace_id": "019e0b6c-2cd4-7322-8dc5-eea2dad65972",
+  "traced": true,
+  "latency_ms": 3811.334
+}
