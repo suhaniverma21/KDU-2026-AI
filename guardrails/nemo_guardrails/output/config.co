@@ -1,0 +1,17 @@
+define user input
+  "..."
+
+define flow
+  user input
+  bot $llm_output
+
+define bot block sensitive
+  "I can help with account questions, but I can't reveal full stored personal data."
+
+define subflow phase1 output protection rail
+  $should_block = execute should_block_output(user_message=$user_message, bot_message=$bot_message)
+  if $should_block
+    bot block sensitive
+    stop
+
+  $bot_message = execute redact_output(user_message=$user_message, bot_message=$bot_message)

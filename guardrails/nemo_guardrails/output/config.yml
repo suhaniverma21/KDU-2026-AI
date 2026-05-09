@@ -1,0 +1,7 @@
+rails:
+  output:
+    flows:
+      - phase1 output protection rail
+  dialog:
+    user_messages:
+      embeddings_only: True
