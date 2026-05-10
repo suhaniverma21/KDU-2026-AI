@@ -1,0 +1,66 @@
+{
+  "analysis_date": "2026-05-10",
+  "request_volume": 1000000,
+  "token_inputs": {
+    "baseline": {
+      "input_tokens": 1006.6,
+      "output_tokens": 51.1
+    },
+    "fine_tuned": {
+      "input_tokens": 40.6,
+      "output_tokens": 50.9
+    },
+    "trained_tokens": 15519
+  },
+  "pricing_sources": {
+    "baseline": {
+      "label": "OpenAI GPT-4o model page",
+      "url": "https://developers.openai.com/api/docs/models/gpt-4o",
+      "verified_on": "2026-05-10"
+    },
+    "fine_tuned_inference": {
+      "label": "OpenAI GPT-4.1 mini model page",
+      "url": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+      "verified_on": "2026-05-10"
+    },
+    "fine_tune_training": {
+      "label": "Manual input required",
+      "url": "https://openai.com/api/pricing/",
+      "verified_on": "2026-05-10",
+      "note": "A current official gpt-4.1-mini supervised fine-tuning training rate was not confirmed from the latest pricing pages during implementation, so this value must be supplied explicitly for exact ROI.",
+      "training_price_per_1m_tokens": 3.0
+    }
+  },
+  "cost_matrix": [
+    {
+      "approach": "Few-shot prompt baseline",
+      "model": "gpt-4o",
+      "avg_input_tokens_per_request": 1006.6,
+      "avg_output_tokens_per_request": 51.1,
+      "input_price_per_1m": 2.5,
+      "output_price_per_1m": 10.0,
+      "cost_per_request_usd": 0.0030275,
+      "cost_for_request_volume_usd": 3027.5
+    },
+    {
+      "approach": "Fine-tuned zero-shot",
+      "model": "ft:gpt-4.1-mini-2025-04-14:kickdrum:ops-phase1:DdsePiWJ",
+      "avg_input_tokens_per_request": 40.6,
+      "avg_output_tokens_per_request": 50.9,
+      "input_price_per_1m": 0.4,
+      "output_price_per_1m": 1.6,
+      "cost_per_request_usd": 9.768e-05,
+      "cost_for_request_volume_usd": 97.68
+    }
+  ],
+  "roi": {
+    "baseline_total_inference_cost_usd": 3027.5,
+    "fine_tuned_total_inference_cost_usd": 97.68,
+    "fine_tuning_training_cost_usd": 0.0466,
+    "fine_tuned_all_in_cost_usd": 97.7266,
+    "net_savings_usd": 2929.7734,
+    "cost_reduction_percent": 96.77,
+    "break_even_requests": 16
+  },
+  "notes": []
+}

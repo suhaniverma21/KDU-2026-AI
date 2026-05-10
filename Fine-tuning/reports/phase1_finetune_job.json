@@ -1,0 +1,8 @@
+{
+  "job_id": "ftjob-TGM7QzxpFS734guhSMvyalF4",
+  "status": "validating_files",
+  "base_model": "gpt-4.1-mini-2025-04-14",
+  "train_upload_id": "file-8Dt8c63b8JQGQYaMzs9ZtZ",
+  "validation_upload_id": null,
+  "suffix": "ops-phase1"
+}

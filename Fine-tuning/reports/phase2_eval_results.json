@@ -1,0 +1,488 @@
+{
+  "evaluated_model": "ft:gpt-4.1-mini-2025-04-14:kickdrum:ops-phase1:DdsePiWJ",
+  "grader_model": "gpt-4o",
+  "prediction_artifact": "reports\\phase2_predictions.json",
+  "total_examples": 20,
+  "correct_predictions": 18,
+  "incorrect_predictions": 2,
+  "accuracy": 0.9,
+  "valid_dsl_rate": 1.0,
+  "filler_free_rate": 1.0,
+  "exact_match_rate": 0.9,
+  "avg_inference_input_tokens": 40.2,
+  "avg_inference_output_tokens": 49.55,
+  "avg_grader_input_tokens": 345.4,
+  "avg_grader_output_tokens": 28.55,
+  "failure_counts_by_intent": {
+    "DEPLOY": 2
+  },
+  "failure_counts_by_environment": {
+    "dev": 1,
+    "staging": 1
+  },
+  "failure_counts_by_category": {
+    "wrong-field-value": 2
+  },
+  "cases": [
+    {
+      "case_id": 1,
+      "request": "Patch the load balancer in production immediately for performance improvements.",
+      "expected_dsl": "OPS|INTENT=PATCH|SERVICE=\"load-balancer\"|ENV=\"prod\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"patch\",\"performance\"]",
+      "predicted_dsl": "OPS|INTENT=PATCH|SERVICE=\"load-balancer\"|ENV=\"prod\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"patch\",\"performance\"]",
+      "valid_dsl": true,
+      "validator_errors": [],
+      "filler_detected": false,
+      "score": 1,
+      "judge_reason": "The predicted output matches the ground truth exactly.",
+      "judge_raw_response": "```json\n{\n  \"score\": 1,\n  \"reason\": \"The predicted output matches the ground truth exactly.\"\n}\n```",
+      "inference_usage": {
+        "input_tokens": 40,
+        "output_tokens": 48,
+        "total_tokens": 88
+      },
+      "grader_usage": {
+        "input_tokens": 342,
+        "output_tokens": 28,
+        "total_tokens": 370
+      },
+      "failure_category": "correct"
+    },
+    {
+      "case_id": 2,
+      "request": "Backup the user profiles database in production on Saturday at 0200Z.",
+      "expected_dsl": "OPS|INTENT=BACKUP|SERVICE=\"user-profiles-db\"|ENV=\"prod\"|PRIORITY=LOW|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"MAINTENANCE_SAT_0200Z\"|TAGS=[\"backup\",\"profiles\"]",
+      "predicted_dsl": "OPS|INTENT=BACKUP|SERVICE=\"user-profiles-db\"|ENV=\"prod\"|PRIORITY=LOW|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"MAINTENANCE_SAT_0200Z\"|TAGS=[\"backup\",\"profiles\"]",
+      "valid_dsl": true,
+      "validator_errors": [],
+      "filler_detected": false,
+      "score": 1,
+      "judge_reason": "The predicted output matches the ground truth exactly.",
+      "judge_raw_response": "```json\n{\n  \"score\": 1,\n  \"reason\": \"The predicted output matches the ground truth exactly.\"\n}\n```",
+      "inference_usage": {
+        "input_tokens": 43,
+        "output_tokens": 58,
+        "total_tokens": 101
+      },
+      "grader_usage": {
+        "input_tokens": 365,
+        "output_tokens": 28,
+        "total_tokens": 393
+      },
+      "failure_category": "correct"
+    },
+    {
+      "case_id": 3,
+      "request": "Rollback the recent changes to the billing service in production immediately.",
+      "expected_dsl": "OPS|INTENT=ROLLBACK|SERVICE=\"billing-service\"|ENV=\"prod\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"rollback\",\"billing\"]",
+      "predicted_dsl": "OPS|INTENT=ROLLBACK|SERVICE=\"billing-service\"|ENV=\"prod\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"rollback\",\"billing\"]",
+      "valid_dsl": true,
+      "validator_errors": [],
+      "filler_detected": false,
+      "score": 1,
+      "judge_reason": "The predicted output matches the ground truth exactly.",
+      "judge_raw_response": "```json\n{\n  \"score\": 1,\n  \"reason\": \"The predicted output matches the ground truth exactly.\"\n}\n```",
+      "inference_usage": {
+        "input_tokens": 40,
+        "output_tokens": 48,
+        "total_tokens": 88
+      },
+      "grader_usage": {
+        "input_tokens": 342,
+        "output_tokens": 28,
+        "total_tokens": 370
+      },
+      "failure_category": "correct"
+    },
+    {
+      "case_id": 4,
+      "request": "Scale the notification service in production due to high demand.",
+      "expected_dsl": "OPS|INTENT=SCALE|SERVICE=\"notification-service\"|ENV=\"prod\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"scaling\",\"notification\"]",
+      "predicted_dsl": "OPS|INTENT=SCALE|SERVICE=\"notification-service\"|ENV=\"prod\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"scaling\",\"notification\"]",
+      "valid_dsl": true,
+      "validator_errors": [],
+      "filler_detected": false,
+      "score": 1,
+      "judge_reason": "The predicted output matches the ground truth exactly.",
+      "judge_raw_response": "```json\n{\n  \"score\": 1,\n  \"reason\": \"The predicted output matches the ground truth exactly.\"\n}\n```",
+      "inference_usage": {
+        "input_tokens": 39,
+        "output_tokens": 48,
+        "total_tokens": 87
+      },
+      "grader_usage": {
+        "input_tokens": 341,
+        "output_tokens": 28,
+        "total_tokens": 369
+      },
+      "failure_category": "correct"
+    },
+    {
+      "case_id": 5,
+      "request": "Restore the main database in the disaster recovery environment immediately.",
+      "expected_dsl": "OPS|INTENT=RESTORE|SERVICE=\"main-db\"|ENV=\"dr\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"restore\",\"dr\"]",
+      "predicted_dsl": "OPS|INTENT=RESTORE|SERVICE=\"main-db\"|ENV=\"dr\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"restore\",\"dr\"]",
+      "valid_dsl": true,
+      "validator_errors": [],
+      "filler_detected": false,
+      "score": 1,
+      "judge_reason": "The predicted output matches the ground truth exactly.",
+      "judge_raw_response": "```json\n{\n  \"score\": 1,\n  \"reason\": \"The predicted output matches the ground truth exactly.\"\n}\n```",
+      "inference_usage": {
+        "input_tokens": 39,
+        "output_tokens": 49,
+        "total_tokens": 88
+      },
+      "grader_usage": {
+        "input_tokens": 343,
+        "output_tokens": 28,
+        "total_tokens": 371
+      },
+      "failure_category": "correct"
+    },
+    {
+      "case_id": 6,
+      "request": "Patch the web server in dev immediately for a critical update.",
+      "expected_dsl": "OPS|INTENT=PATCH|SERVICE=\"web-server\"|ENV=\"dev\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"patch\",\"web\"]",
+      "predicted_dsl": "OPS|INTENT=PATCH|SERVICE=\"web-server\"|ENV=\"dev\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"patch\",\"web\"]",
+      "valid_dsl": true,
+      "validator_errors": [],
+      "filler_detected": false,
+      "score": 1,
+      "judge_reason": "The predicted output matches the ground truth exactly.",
+      "judge_raw_response": "```json\n{\n  \"score\": 1,\n  \"reason\": \"The predicted output matches the ground truth exactly.\"\n}\n```",
+      "inference_usage": {
+        "input_tokens": 40,
+        "output_tokens": 48,
+        "total_tokens": 88
+      },
+      "grader_usage": {
+        "input_tokens": 342,
+        "output_tokens": 28,
+        "total_tokens": 370
+      },
+      "failure_category": "correct"
+    },
+    {
+      "case_id": 7,
+      "request": "Block unauthorized access attempts on the API server in dev immediately.",
+      "expected_dsl": "OPS|INTENT=BLOCK|SERVICE=\"api-server\"|ENV=\"dev\"|PRIORITY=CRITICAL|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"security\",\"api\"]",
+      "predicted_dsl": "OPS|INTENT=BLOCK|SERVICE=\"api-server\"|ENV=\"dev\"|PRIORITY=CRITICAL|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"security\",\"api\"]",
+      "valid_dsl": true,
+      "validator_errors": [],
+      "filler_detected": false,
+      "score": 1,
+      "judge_reason": "The predicted output matches the ground truth exactly.",
+      "judge_raw_response": "```json\n{\n  \"score\": 1,\n  \"reason\": \"The predicted output matches the ground truth exactly.\"\n}\n```",
+      "inference_usage": {
+        "input_tokens": 40,
+        "output_tokens": 47,
+        "total_tokens": 87
+      },
+      "grader_usage": {
+        "input_tokens": 340,
+        "output_tokens": 28,
+        "total_tokens": 368
+      },
+      "failure_category": "correct"
+    },
+    {
+      "case_id": 8,
+      "request": "Rollback the latest deployment of the analytics service in staging immediately.",
+      "expected_dsl": "OPS|INTENT=ROLLBACK|SERVICE=\"analytics-service\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"rollback\",\"analytics\"]",
+      "predicted_dsl": "OPS|INTENT=ROLLBACK|SERVICE=\"analytics-service\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"rollback\",\"analytics\"]",
+      "valid_dsl": true,
+      "validator_errors": [],
+      "filler_detected": false,
+      "score": 1,
+      "judge_reason": "The predicted output matches the ground truth exactly.",
+      "judge_raw_response": "```json\n{\n  \"score\": 1,\n  \"reason\": \"The predicted output matches the ground truth exactly.\"\n}\n```",
+      "inference_usage": {
+        "input_tokens": 40,
+        "output_tokens": 49,
+        "total_tokens": 89
+      },
+      "grader_usage": {
+        "input_tokens": 344,
+        "output_tokens": 28,
+        "total_tokens": 372
+      },
+      "failure_category": "correct"
+    },
+    {
+      "case_id": 9,
+      "request": "Rollback the recent changes to the notification service in dev immediately.",
+      "expected_dsl": "OPS|INTENT=ROLLBACK|SERVICE=\"notification-service\"|ENV=\"dev\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"rollback\",\"notification\"]",
+      "predicted_dsl": "OPS|INTENT=ROLLBACK|SERVICE=\"notification-service\"|ENV=\"dev\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"rollback\",\"notification\"]",
+      "valid_dsl": true,
+      "validator_errors": [],
+      "filler_detected": false,
+      "score": 1,
+      "judge_reason": "The predicted output matches the ground truth exactly.",
+      "judge_raw_response": "```json\n{\n  \"score\": 1,\n  \"reason\": \"The predicted output matches the ground truth exactly.\"\n}\n```",
+      "inference_usage": {
+        "input_tokens": 40,
+        "output_tokens": 48,
+        "total_tokens": 88
+      },
+      "grader_usage": {
+        "input_tokens": 342,
+        "output_tokens": 28,
+        "total_tokens": 370
+      },
+      "failure_category": "correct"
+    },
+    {
+      "case_id": 10,
+      "request": "Block suspicious IPs on the network in staging immediately.",
+      "expected_dsl": "OPS|INTENT=BLOCK|SERVICE=\"network\"|ENV=\"staging\"|PRIORITY=CRITICAL|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"security\",\"network\"]",
+      "predicted_dsl": "OPS|INTENT=BLOCK|SERVICE=\"network\"|ENV=\"staging\"|PRIORITY=CRITICAL|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"security\",\"network\"]",
+      "valid_dsl": true,
+      "validator_errors": [],
+      "filler_detected": false,
+      "score": 1,
+      "judge_reason": "The predicted output matches the ground truth exactly.",
+      "judge_raw_response": "```json\n{\n  \"score\": 1,\n  \"reason\": \"The predicted output matches the ground truth exactly.\"\n}\n```",
+      "inference_usage": {
+        "input_tokens": 39,
+        "output_tokens": 47,
+        "total_tokens": 86
+      },
+      "grader_usage": {
+        "input_tokens": 339,
+        "output_tokens": 28,
+        "total_tokens": 367
+      },
+      "failure_category": "correct"
+    },
+    {
+      "case_id": 11,
+      "request": "Scale the recommendation engine in staging immediately due to increased usage.",
+      "expected_dsl": "OPS|INTENT=SCALE|SERVICE=\"recommendation-engine\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"scaling\",\"recommendation\"]",
+      "predicted_dsl": "OPS|INTENT=SCALE|SERVICE=\"recommendation-engine\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"scaling\",\"recommendation\"]",
+      "valid_dsl": true,
+      "validator_errors": [],
+      "filler_detected": false,
+      "score": 1,
+      "judge_reason": "The predicted output matches the ground truth exactly.",
+      "judge_raw_response": "```json\n{\n  \"score\": 1,\n  \"reason\": \"The predicted output matches the ground truth exactly.\"\n}\n```",
+      "inference_usage": {
+        "input_tokens": 40,
+        "output_tokens": 51,
+        "total_tokens": 91
+      },
+      "grader_usage": {
+        "input_tokens": 348,
+        "output_tokens": 28,
+        "total_tokens": 376
+      },
+      "failure_category": "correct"
+    },
+    {
+      "case_id": 12,
+      "request": "Scale the video processing service in production immediately due to high demand.",
+      "expected_dsl": "OPS|INTENT=SCALE|SERVICE=\"video-processing\"|ENV=\"prod\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"scaling\",\"video\"]",
+      "predicted_dsl": "OPS|INTENT=SCALE|SERVICE=\"video-processing\"|ENV=\"prod\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"scaling\",\"video\"]",
+      "valid_dsl": true,
+      "validator_errors": [],
+      "filler_detected": false,
+      "score": 1,
+      "judge_reason": "The predicted output matches the ground truth exactly.",
+      "judge_raw_response": "```json\n{\n  \"score\": 1,\n  \"reason\": \"The predicted output matches the ground truth exactly.\"\n}\n```",
+      "inference_usage": {
+        "input_tokens": 41,
+        "output_tokens": 49,
+        "total_tokens": 90
+      },
+      "grader_usage": {
+        "input_tokens": 345,
+        "output_tokens": 28,
+        "total_tokens": 373
+      },
+      "failure_category": "correct"
+    },
+    {
+      "case_id": 13,
+      "request": "Restart the logging service in the dev environment during business hours.",
+      "expected_dsl": "OPS|INTENT=RESTART|SERVICE=\"logging-service\"|ENV=\"dev\"|PRIORITY=MEDIUM|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"BUSINESS_HOURS\"|TAGS=[\"restart\",\"logging\"]",
+      "predicted_dsl": "OPS|INTENT=RESTART|SERVICE=\"logging-service\"|ENV=\"dev\"|PRIORITY=MEDIUM|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"BUSINESS_HOURS\"|TAGS=[\"restart\",\"logging\"]",
+      "valid_dsl": true,
+      "validator_errors": [],
+      "filler_detected": false,
+      "score": 1,
+      "judge_reason": "The predicted output matches the ground truth exactly.",
+      "judge_raw_response": "```json\n{\n  \"score\": 1,\n  \"reason\": \"The predicted output matches the ground truth exactly.\"\n}\n```",
+      "inference_usage": {
+        "input_tokens": 40,
+        "output_tokens": 50,
+        "total_tokens": 90
+      },
+      "grader_usage": {
+        "input_tokens": 346,
+        "output_tokens": 28,
+        "total_tokens": 374
+      },
+      "failure_category": "correct"
+    },
+    {
+      "case_id": 14,
+      "request": "Backup the logs database in dev environment on Saturday at 0200Z.",
+      "expected_dsl": "OPS|INTENT=BACKUP|SERVICE=\"logs-db\"|ENV=\"dev\"|PRIORITY=LOW|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"MAINTENANCE_SAT_0200Z\"|TAGS=[\"backup\",\"logs\"]",
+      "predicted_dsl": "OPS|INTENT=BACKUP|SERVICE=\"logs-db\"|ENV=\"dev\"|PRIORITY=LOW|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"MAINTENANCE_SAT_0200Z\"|TAGS=[\"backup\",\"logs\"]",
+      "valid_dsl": true,
+      "validator_errors": [],
+      "filler_detected": false,
+      "score": 1,
+      "judge_reason": "The predicted output matches the ground truth exactly.",
+      "judge_raw_response": "```json\n{\n  \"score\": 1,\n  \"reason\": \"The predicted output matches the ground truth exactly.\"\n}\n```",
+      "inference_usage": {
+        "input_tokens": 43,
+        "output_tokens": 56,
+        "total_tokens": 99
+      },
+      "grader_usage": {
+        "input_tokens": 361,
+        "output_tokens": 28,
+        "total_tokens": 389
+      },
+      "failure_category": "correct"
+    },
+    {
+      "case_id": 15,
+      "request": "Rollback the recent changes to the cache service in staging immediately.",
+      "expected_dsl": "OPS|INTENT=ROLLBACK|SERVICE=\"cache-service\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"rollback\",\"cache\"]",
+      "predicted_dsl": "OPS|INTENT=ROLLBACK|SERVICE=\"cache-service\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"rollback\",\"cache\"]",
+      "valid_dsl": true,
+      "validator_errors": [],
+      "filler_detected": false,
+      "score": 1,
+      "judge_reason": "The predicted output matches the ground truth exactly.",
+      "judge_raw_response": "```json\n{\n  \"score\": 1,\n  \"reason\": \"The predicted output matches the ground truth exactly.\"\n}\n```",
+      "inference_usage": {
+        "input_tokens": 40,
+        "output_tokens": 49,
+        "total_tokens": 89
+      },
+      "grader_usage": {
+        "input_tokens": 344,
+        "output_tokens": 28,
+        "total_tokens": 372
+      },
+      "failure_category": "correct"
+    },
+    {
+      "case_id": 16,
+      "request": "Failover the order processing service to the disaster recovery site immediately.",
+      "expected_dsl": "OPS|INTENT=FAILOVER|SERVICE=\"order-processing\"|ENV=\"dr\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"failover\",\"order\"]",
+      "predicted_dsl": "OPS|INTENT=FAILOVER|SERVICE=\"order-processing\"|ENV=\"dr\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"failover\",\"order\"]",
+      "valid_dsl": true,
+      "validator_errors": [],
+      "filler_detected": false,
+      "score": 1,
+      "judge_reason": "The predicted output matches the ground truth exactly.",
+      "judge_raw_response": "```json\n{\n  \"score\": 1,\n  \"reason\": \"The predicted output matches the ground truth exactly.\"\n}\n```",
+      "inference_usage": {
+        "input_tokens": 41,
+        "output_tokens": 50,
+        "total_tokens": 91
+      },
+      "grader_usage": {
+        "input_tokens": 347,
+        "output_tokens": 28,
+        "total_tokens": 375
+      },
+      "failure_category": "correct"
+    },
+    {
+      "case_id": 17,
+      "request": "Deploy the new search feature to the dev environment immediately.",
+      "expected_dsl": "OPS|INTENT=DEPLOY|SERVICE=\"search-feature\"|ENV=\"dev\"|PRIORITY=MEDIUM|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"deployment\",\"search\"]",
+      "predicted_dsl": "OPS|INTENT=DEPLOY|SERVICE=\"search-feature\"|ENV=\"dev\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"deployment\",\"search\"]",
+      "valid_dsl": true,
+      "validator_errors": [],
+      "filler_detected": false,
+      "score": 0,
+      "judge_reason": "PRIORITY value is incorrect; expected MEDIUM, found HIGH.",
+      "judge_raw_response": "```json\n{\n  \"score\": 0,\n  \"reason\": \"PRIORITY value is incorrect; expected MEDIUM, found HIGH.\"\n}\n```",
+      "inference_usage": {
+        "input_tokens": 39,
+        "output_tokens": 48,
+        "total_tokens": 87
+      },
+      "grader_usage": {
+        "input_tokens": 342,
+        "output_tokens": 33,
+        "total_tokens": 375
+      },
+      "failure_category": "wrong-field-value"
+    },
+    {
+      "case_id": 18,
+      "request": "Restore the backup of the order database in staging immediately.",
+      "expected_dsl": "OPS|INTENT=RESTORE|SERVICE=\"order-db\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"restore\",\"order\"]",
+      "predicted_dsl": "OPS|INTENT=RESTORE|SERVICE=\"order-db\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"restore\",\"order\"]",
+      "valid_dsl": true,
+      "validator_errors": [],
+      "filler_detected": false,
+      "score": 1,
+      "judge_reason": "The predicted output matches the ground truth exactly.",
+      "judge_raw_response": "```json\n{\n  \"score\": 1,\n  \"reason\": \"The predicted output matches the ground truth exactly.\"\n}\n```",
+      "inference_usage": {
+        "input_tokens": 39,
+        "output_tokens": 49,
+        "total_tokens": 88
+      },
+      "grader_usage": {
+        "input_tokens": 343,
+        "output_tokens": 28,
+        "total_tokens": 371
+      },
+      "failure_category": "correct"
+    },
+    {
+      "case_id": 19,
+      "request": "Patch the DNS server in staging immediately for security updates.",
+      "expected_dsl": "OPS|INTENT=PATCH|SERVICE=\"dns-server\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"patch\",\"dns\"]",
+      "predicted_dsl": "OPS|INTENT=PATCH|SERVICE=\"dns-server\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"patch\",\"dns\"]",
+      "valid_dsl": true,
+      "validator_errors": [],
+      "filler_detected": false,
+      "score": 1,
+      "judge_reason": "The predicted output matches the ground truth exactly.",
+      "judge_raw_response": "```json\n{\n  \"score\": 1,\n  \"reason\": \"The predicted output matches the ground truth exactly.\"\n}\n```",
+      "inference_usage": {
+        "input_tokens": 39,
+        "output_tokens": 48,
+        "total_tokens": 87
+      },
+      "grader_usage": {
+        "input_tokens": 341,
+        "output_tokens": 28,
+        "total_tokens": 369
+      },
+      "failure_category": "correct"
+    },
+    {
+      "case_id": 20,
+      "request": "Deploy the new version of the user service to staging during business hours.",
+      "expected_dsl": "OPS|INTENT=DEPLOY|SERVICE=\"user-service\"|ENV=\"staging\"|PRIORITY=MEDIUM|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"BUSINESS_HOURS\"|TAGS=[\"deployment\",\"user\"]",
+      "predicted_dsl": "OPS|INTENT=DEPLOY|SERVICE=\"user-service\"|ENV=\"staging\"|PRIORITY=MEDIUM|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"BUSINESS_HOURS\"|TAGS=[\"deployment\",\"user\"]",
+      "valid_dsl": true,
+      "validator_errors": [],
+      "filler_detected": false,
+      "score": 0,
+      "judge_reason": "APPROVAL field value is incorrect; expected MANUAL, found AUTO.",
+      "judge_raw_response": "```json\n{\n  \"score\": 0,\n  \"reason\": \"APPROVAL field value is incorrect; expected MANUAL, found AUTO.\"\n}\n```",
+      "inference_usage": {
+        "input_tokens": 42,
+        "output_tokens": 51,
+        "total_tokens": 93
+      },
+      "grader_usage": {
+        "input_tokens": 351,
+        "output_tokens": 34,
+        "total_tokens": 385
+      },
+      "failure_category": "wrong-field-value"
+    }
+  ]
+}

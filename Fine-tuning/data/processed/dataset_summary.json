@@ -1,0 +1,9 @@
+{
+  "total_valid_examples": 50,
+  "train_examples": 50,
+  "bad_sample_variant_examples": 50,
+  "contaminated_record_index": 0,
+  "train_output": "data\\processed\\train.jsonl",
+  "bad_sample_output": "data\\processed\\train_bad_sample.jsonl",
+  "holdout_output": "data\\processed\\phase1_holdout.json"
+}
