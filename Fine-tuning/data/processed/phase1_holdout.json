@@ -1,0 +1,42 @@
+[
+  {
+    "request": "Deploy inventory-api to staging during business hours for the QA cycle.",
+    "expected_dsl": "OPS|INTENT=DEPLOY|SERVICE=\"inventory-api\"|ENV=\"staging\"|PRIORITY=MEDIUM|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"BUSINESS_HOURS\"|TAGS=[\"release\",\"inventory\"]"
+  },
+  {
+    "request": "Immediately scale checkout-worker in prod because orders are backing up.",
+    "expected_dsl": "OPS|INTENT=SCALE|SERVICE=\"checkout-worker\"|ENV=\"prod\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"scaling\",\"checkout\"]"
+  },
+  {
+    "request": "Restart report-builder in dev quietly during business hours.",
+    "expected_dsl": "OPS|INTENT=RESTART|SERVICE=\"report-builder\"|ENV=\"dev\"|PRIORITY=LOW|APPROVAL=AUTO|NOTIFY=NO|WINDOW=\"BUSINESS_HOURS\"|TAGS=[\"restart\",\"reports\"]"
+  },
+  {
+    "request": "Back up audit-db in prod on Saturday 0200Z before the compliance review.",
+    "expected_dsl": "OPS|INTENT=BACKUP|SERVICE=\"audit-db\"|ENV=\"prod\"|PRIORITY=MEDIUM|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"MAINTENANCE_SAT_0200Z\"|TAGS=[\"backup\",\"compliance\"]"
+  },
+  {
+    "request": "Restore ledger-db in DR immediately after the outage declaration.",
+    "expected_dsl": "OPS|INTENT=RESTORE|SERVICE=\"ledger-db\"|ENV=\"dr\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"restore\",\"ledger\"]"
+  },
+  {
+    "request": "Patch session-gateway in prod on Sunday 0100Z for a security remediation.",
+    "expected_dsl": "OPS|INTENT=PATCH|SERVICE=\"session-gateway\"|ENV=\"prod\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"MAINTENANCE_SUN_0100Z\"|TAGS=[\"patch\",\"security\"]"
+  },
+  {
+    "request": "Block suspicious traffic at api-firewall in prod right now.",
+    "expected_dsl": "OPS|INTENT=BLOCK|SERVICE=\"api-firewall\"|ENV=\"prod\"|PRIORITY=CRITICAL|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"security\",\"network\"]"
+  },
+  {
+    "request": "Migrate user-db in staging after hours ahead of the integration test.",
+    "expected_dsl": "OPS|INTENT=MIGRATE|SERVICE=\"user-db\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"AFTER_HOURS\"|TAGS=[\"migration\",\"users\"]"
+  },
+  {
+    "request": "Fail over notification-api to DR immediately.",
+    "expected_dsl": "OPS|INTENT=FAILOVER|SERVICE=\"notification-api\"|ENV=\"dr\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"failover\",\"notifications\"]"
+  },
+  {
+    "request": "Rollback pricing-api in prod immediately due to a broken release.",
+    "expected_dsl": "OPS|INTENT=ROLLBACK|SERVICE=\"pricing-api\"|ENV=\"prod\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"rollback\",\"pricing\"]"
+  }
+]

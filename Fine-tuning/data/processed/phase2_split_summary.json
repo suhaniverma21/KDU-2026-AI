@@ -1,0 +1,7 @@
+{
+  "total_valid_examples": 50,
+  "phase2_train_examples": 30,
+  "validation_examples": 20,
+  "train_output": "data\\processed\\phase2_train.jsonl",
+  "validation_output": "data\\processed\\validation.jsonl"
+}

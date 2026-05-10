@@ -1,0 +1,245 @@
+{
+  "baseline_model": "gpt-4o",
+  "fine_tuned_model": "ft:gpt-4.1-mini-2025-04-14:kickdrum:ops-phase1:DdsePiWJ",
+  "num_cases": 10,
+  "baseline_exact_accuracy": 0.2,
+  "ft_exact_accuracy": 0.3,
+  "baseline_valid_rate": 1.0,
+  "ft_valid_rate": 1.0,
+  "baseline_avg_input_tokens": 1006.6,
+  "ft_avg_input_tokens": 40.6,
+  "input_token_reduction": 966.0,
+  "input_token_reduction_pct": 95.97,
+  "cases": [
+    {
+      "case_id": 1,
+      "request": "Deploy inventory-api to staging during business hours for the QA cycle.",
+      "expected_dsl": "OPS|INTENT=DEPLOY|SERVICE=\"inventory-api\"|ENV=\"staging\"|PRIORITY=MEDIUM|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"BUSINESS_HOURS\"|TAGS=[\"release\",\"inventory\"]",
+      "baseline_output": "OPS|INTENT=DEPLOY|SERVICE=\"inventory-api\"|ENV=\"staging\"|PRIORITY=MEDIUM|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"BUSINESS_HOURS\"|TAGS=[\"deploy\",\"qa\"]",
+      "ft_output": "OPS|INTENT=DEPLOY|SERVICE=\"inventory-api\"|ENV=\"staging\"|PRIORITY=MEDIUM|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"BUSINESS_HOURS\"|TAGS=[\"deployment\",\"inventory\"]",
+      "baseline_exact": false,
+      "ft_exact": false,
+      "baseline_valid": true,
+      "ft_valid": true,
+      "baseline_filler": false,
+      "ft_filler": false,
+      "baseline_usage": {
+        "input_tokens": 1007,
+        "output_tokens": 52,
+        "total_tokens": 1059
+      },
+      "ft_usage": {
+        "input_tokens": 41,
+        "output_tokens": 51,
+        "total_tokens": 92
+      }
+    },
+    {
+      "case_id": 2,
+      "request": "Immediately scale checkout-worker in prod because orders are backing up.",
+      "expected_dsl": "OPS|INTENT=SCALE|SERVICE=\"checkout-worker\"|ENV=\"prod\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"scaling\",\"checkout\"]",
+      "baseline_output": "OPS|INTENT=SCALE|SERVICE=\"checkout-worker\"|ENV=\"prod\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"scaling\",\"orders\"]",
+      "ft_output": "OPS|INTENT=SCALE|SERVICE=\"checkout-worker\"|ENV=\"prod\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"scaling\",\"checkout\"]",
+      "baseline_exact": false,
+      "ft_exact": true,
+      "baseline_valid": true,
+      "ft_valid": true,
+      "baseline_filler": false,
+      "ft_filler": false,
+      "baseline_usage": {
+        "input_tokens": 1006,
+        "output_tokens": 49,
+        "total_tokens": 1055
+      },
+      "ft_usage": {
+        "input_tokens": 40,
+        "output_tokens": 49,
+        "total_tokens": 89
+      }
+    },
+    {
+      "case_id": 3,
+      "request": "Restart report-builder in dev quietly during business hours.",
+      "expected_dsl": "OPS|INTENT=RESTART|SERVICE=\"report-builder\"|ENV=\"dev\"|PRIORITY=LOW|APPROVAL=AUTO|NOTIFY=NO|WINDOW=\"BUSINESS_HOURS\"|TAGS=[\"restart\",\"reports\"]",
+      "baseline_output": "OPS|INTENT=RESTART|SERVICE=\"report-builder\"|ENV=\"dev\"|PRIORITY=MEDIUM|APPROVAL=AUTO|NOTIFY=NO|WINDOW=\"BUSINESS_HOURS\"|TAGS=[\"restart\",\"report\"]",
+      "ft_output": "OPS|INTENT=RESTART|SERVICE=\"report-builder\"|ENV=\"dev\"|PRIORITY=MEDIUM|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"BUSINESS_HOURS\"|TAGS=[\"restart\",\"report\"]",
+      "baseline_exact": false,
+      "ft_exact": false,
+      "baseline_valid": true,
+      "ft_valid": true,
+      "baseline_filler": false,
+      "ft_filler": false,
+      "baseline_usage": {
+        "input_tokens": 1004,
+        "output_tokens": 50,
+        "total_tokens": 1054
+      },
+      "ft_usage": {
+        "input_tokens": 38,
+        "output_tokens": 50,
+        "total_tokens": 88
+      }
+    },
+    {
+      "case_id": 4,
+      "request": "Back up audit-db in prod on Saturday 0200Z before the compliance review.",
+      "expected_dsl": "OPS|INTENT=BACKUP|SERVICE=\"audit-db\"|ENV=\"prod\"|PRIORITY=MEDIUM|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"MAINTENANCE_SAT_0200Z\"|TAGS=[\"backup\",\"compliance\"]",
+      "baseline_output": "OPS|INTENT=BACKUP|SERVICE=\"audit-db\"|ENV=\"prod\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"MAINTENANCE_SAT_0200Z\"|TAGS=[\"backup\",\"compliance\"]",
+      "ft_output": "OPS|INTENT=BACKUP|SERVICE=\"audit-db\"|ENV=\"prod\"|PRIORITY=LOW|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"MAINTENANCE_SAT_0200Z\"|TAGS=[\"backup\",\"audit\"]",
+      "baseline_exact": false,
+      "ft_exact": false,
+      "baseline_valid": true,
+      "ft_valid": true,
+      "baseline_filler": false,
+      "ft_filler": false,
+      "baseline_usage": {
+        "input_tokens": 1011,
+        "output_tokens": 57,
+        "total_tokens": 1068
+      },
+      "ft_usage": {
+        "input_tokens": 45,
+        "output_tokens": 56,
+        "total_tokens": 101
+      }
+    },
+    {
+      "case_id": 5,
+      "request": "Restore ledger-db in DR immediately after the outage declaration.",
+      "expected_dsl": "OPS|INTENT=RESTORE|SERVICE=\"ledger-db\"|ENV=\"dr\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"restore\",\"ledger\"]",
+      "baseline_output": "OPS|INTENT=RESTORE|SERVICE=\"ledger-db\"|ENV=\"dr\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"restore\",\"outage\"]",
+      "ft_output": "OPS|INTENT=RESTORE|SERVICE=\"ledger-db\"|ENV=\"dr\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"restore\",\"ledger\"]",
+      "baseline_exact": false,
+      "ft_exact": true,
+      "baseline_valid": true,
+      "ft_valid": true,
+      "baseline_filler": false,
+      "ft_filler": false,
+      "baseline_usage": {
+        "input_tokens": 1005,
+        "output_tokens": 50,
+        "total_tokens": 1055
+      },
+      "ft_usage": {
+        "input_tokens": 39,
+        "output_tokens": 49,
+        "total_tokens": 88
+      }
+    },
+    {
+      "case_id": 6,
+      "request": "Patch session-gateway in prod on Sunday 0100Z for a security remediation.",
+      "expected_dsl": "OPS|INTENT=PATCH|SERVICE=\"session-gateway\"|ENV=\"prod\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"MAINTENANCE_SUN_0100Z\"|TAGS=[\"patch\",\"security\"]",
+      "baseline_output": "OPS|INTENT=PATCH|SERVICE=\"session-gateway\"|ENV=\"prod\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"MAINTENANCE_SUN_0100Z\"|TAGS=[\"patch\",\"security\"]",
+      "ft_output": "OPS|INTENT=PATCH|SERVICE=\"session-gateway\"|ENV=\"prod\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"MAINTENANCE_SUN_0100Z\"|TAGS=[\"patch\",\"security\"]",
+      "baseline_exact": true,
+      "ft_exact": true,
+      "baseline_valid": true,
+      "ft_valid": true,
+      "baseline_filler": false,
+      "ft_filler": false,
+      "baseline_usage": {
+        "input_tokens": 1011,
+        "output_tokens": 56,
+        "total_tokens": 1067
+      },
+      "ft_usage": {
+        "input_tokens": 45,
+        "output_tokens": 56,
+        "total_tokens": 101
+      }
+    },
+    {
+      "case_id": 7,
+      "request": "Block suspicious traffic at api-firewall in prod right now.",
+      "expected_dsl": "OPS|INTENT=BLOCK|SERVICE=\"api-firewall\"|ENV=\"prod\"|PRIORITY=CRITICAL|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"security\",\"network\"]",
+      "baseline_output": "OPS|INTENT=BLOCK|SERVICE=\"api-firewall\"|ENV=\"prod\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"security\",\"traffic\"]",
+      "ft_output": "OPS|INTENT=BLOCK|SERVICE=\"api-firewall\"|ENV=\"prod\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"security\",\"api\"]",
+      "baseline_exact": false,
+      "ft_exact": false,
+      "baseline_valid": true,
+      "ft_valid": true,
+      "baseline_filler": false,
+      "ft_filler": false,
+      "baseline_usage": {
+        "input_tokens": 1006,
+        "output_tokens": 49,
+        "total_tokens": 1055
+      },
+      "ft_usage": {
+        "input_tokens": 40,
+        "output_tokens": 49,
+        "total_tokens": 89
+      }
+    },
+    {
+      "case_id": 8,
+      "request": "Migrate user-db in staging after hours ahead of the integration test.",
+      "expected_dsl": "OPS|INTENT=MIGRATE|SERVICE=\"user-db\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"AFTER_HOURS\"|TAGS=[\"migration\",\"users\"]",
+      "baseline_output": "OPS|INTENT=MIGRATE|SERVICE=\"user-db\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"AFTER_HOURS\"|TAGS=[\"migration\",\"user\"]",
+      "ft_output": "OPS|INTENT=MIGRATE|SERVICE=\"user-db\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"AFTER_HOURS\"|TAGS=[\"migration\",\"database\"]",
+      "baseline_exact": false,
+      "ft_exact": false,
+      "baseline_valid": true,
+      "ft_valid": true,
+      "baseline_filler": false,
+      "ft_filler": false,
+      "baseline_usage": {
+        "input_tokens": 1008,
+        "output_tokens": 50,
+        "total_tokens": 1058
+      },
+      "ft_usage": {
+        "input_tokens": 42,
+        "output_tokens": 50,
+        "total_tokens": 92
+      }
+    },
+    {
+      "case_id": 9,
+      "request": "Fail over notification-api to DR immediately.",
+      "expected_dsl": "OPS|INTENT=FAILOVER|SERVICE=\"notification-api\"|ENV=\"dr\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"failover\",\"notifications\"]",
+      "baseline_output": "OPS|INTENT=FAILOVER|SERVICE=\"notification-api\"|ENV=\"dr\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"failover\",\"notification\"]",
+      "ft_output": "OPS|INTENT=FAILOVER|SERVICE=\"notification-api\"|ENV=\"dr\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"failover\",\"notification\"]",
+      "baseline_exact": false,
+      "ft_exact": false,
+      "baseline_valid": true,
+      "ft_valid": true,
+      "baseline_filler": false,
+      "ft_filler": false,
+      "baseline_usage": {
+        "input_tokens": 1002,
+        "output_tokens": 50,
+        "total_tokens": 1052
+      },
+      "ft_usage": {
+        "input_tokens": 36,
+        "output_tokens": 50,
+        "total_tokens": 86
+      }
+    },
+    {
+      "case_id": 10,
+      "request": "Rollback pricing-api in prod immediately due to a broken release.",
+      "expected_dsl": "OPS|INTENT=ROLLBACK|SERVICE=\"pricing-api\"|ENV=\"prod\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"rollback\",\"pricing\"]",
+      "baseline_output": "OPS|INTENT=ROLLBACK|SERVICE=\"pricing-api\"|ENV=\"prod\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"rollback\",\"pricing\"]",
+      "ft_output": "OPS|INTENT=ROLLBACK|SERVICE=\"pricing-api\"|ENV=\"prod\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"rollback\",\"pricing\"]",
+      "baseline_exact": true,
+      "ft_exact": false,
+      "baseline_valid": true,
+      "ft_valid": true,
+      "baseline_filler": false,
+      "ft_filler": false,
+      "baseline_usage": {
+        "input_tokens": 1006,
+        "output_tokens": 48,
+        "total_tokens": 1054
+      },
+      "ft_usage": {
+        "input_tokens": 40,
+        "output_tokens": 49,
+        "total_tokens": 89
+      }
+    }
+  ]
+}

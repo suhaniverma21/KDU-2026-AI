@@ -1,0 +1,218 @@
+{
+  "generated_at": "2026-05-10T07:05:17.484714+00:00",
+  "mode": "openai",
+  "model": "gpt-4o",
+  "requested_count": 50,
+  "usage": {
+    "input_tokens": 1159,
+    "output_tokens": 7076,
+    "total_tokens": 8235
+  },
+  "seed_examples_used": 10,
+  "valid_examples": [
+    {
+      "request": "Deploy the new version of the user service to staging during business hours.",
+      "dsl": "OPS|INTENT=DEPLOY|SERVICE=\"user-service\"|ENV=\"staging\"|PRIORITY=MEDIUM|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"BUSINESS_HOURS\"|TAGS=[\"deployment\",\"user\"]"
+    },
+    {
+      "request": "Scale the order processor in dev immediately due to increased load.",
+      "dsl": "OPS|INTENT=SCALE|SERVICE=\"order-processor\"|ENV=\"dev\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"scaling\",\"load\"]"
+    },
+    {
+      "request": "Restart the cache server in production after hours for maintenance.",
+      "dsl": "OPS|INTENT=RESTART|SERVICE=\"cache-server\"|ENV=\"prod\"|PRIORITY=MEDIUM|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"AFTER_HOURS\"|TAGS=[\"restart\",\"maintenance\"]"
+    },
+    {
+      "request": "Backup the logs database in dev environment on Saturday at 0200Z.",
+      "dsl": "OPS|INTENT=BACKUP|SERVICE=\"logs-db\"|ENV=\"dev\"|PRIORITY=LOW|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"MAINTENANCE_SAT_0200Z\"|TAGS=[\"backup\",\"logs\"]"
+    },
+    {
+      "request": "Restore the main database in the disaster recovery environment immediately.",
+      "dsl": "OPS|INTENT=RESTORE|SERVICE=\"main-db\"|ENV=\"dr\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"restore\",\"dr\"]"
+    },
+    {
+      "request": "Patch the API gateway in staging during the next maintenance window on Sunday.",
+      "dsl": "OPS|INTENT=PATCH|SERVICE=\"api-gateway\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"MAINTENANCE_SUN_0100Z\"|TAGS=[\"patch\",\"gateway\"]"
+    },
+    {
+      "request": "Block unauthorized access attempts on the web server in production immediately.",
+      "dsl": "OPS|INTENT=BLOCK|SERVICE=\"web-server\"|ENV=\"prod\"|PRIORITY=CRITICAL|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"security\",\"access\"]"
+    },
+    {
+      "request": "Migrate the user database in production after hours for the new architecture.",
+      "dsl": "OPS|INTENT=MIGRATE|SERVICE=\"user-db\"|ENV=\"prod\"|PRIORITY=HIGH|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"AFTER_HOURS\"|TAGS=[\"migration\",\"database\"]"
+    },
+    {
+      "request": "Failover the payment service to the disaster recovery site immediately.",
+      "dsl": "OPS|INTENT=FAILOVER|SERVICE=\"payment-service\"|ENV=\"dr\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"failover\",\"payment\"]"
+    },
+    {
+      "request": "Rollback the latest deployment of the analytics service in staging immediately.",
+      "dsl": "OPS|INTENT=ROLLBACK|SERVICE=\"analytics-service\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"rollback\",\"analytics\"]"
+    },
+    {
+      "request": "Deploy the new search feature to the dev environment immediately.",
+      "dsl": "OPS|INTENT=DEPLOY|SERVICE=\"search-feature\"|ENV=\"dev\"|PRIORITY=MEDIUM|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"deployment\",\"search\"]"
+    },
+    {
+      "request": "Scale the notification service in production due to high demand.",
+      "dsl": "OPS|INTENT=SCALE|SERVICE=\"notification-service\"|ENV=\"prod\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"scaling\",\"notification\"]"
+    },
+    {
+      "request": "Restart the logging service in the dev environment during business hours.",
+      "dsl": "OPS|INTENT=RESTART|SERVICE=\"logging-service\"|ENV=\"dev\"|PRIORITY=MEDIUM|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"BUSINESS_HOURS\"|TAGS=[\"restart\",\"logging\"]"
+    },
+    {
+      "request": "Backup the archive database in staging on Sunday at 0100Z.",
+      "dsl": "OPS|INTENT=BACKUP|SERVICE=\"archive-db\"|ENV=\"staging\"|PRIORITY=LOW|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"MAINTENANCE_SUN_0100Z\"|TAGS=[\"backup\",\"archive\"]"
+    },
+    {
+      "request": "Restore the backup of the test database in dev immediately.",
+      "dsl": "OPS|INTENT=RESTORE|SERVICE=\"test-db\"|ENV=\"dev\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"restore\",\"test\"]"
+    },
+    {
+      "request": "Patch the firewall in the dev environment immediately for security updates.",
+      "dsl": "OPS|INTENT=PATCH|SERVICE=\"firewall\"|ENV=\"dev\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"patch\",\"security\"]"
+    },
+    {
+      "request": "Block suspicious IPs on the network in staging immediately.",
+      "dsl": "OPS|INTENT=BLOCK|SERVICE=\"network\"|ENV=\"staging\"|PRIORITY=CRITICAL|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"security\",\"network\"]"
+    },
+    {
+      "request": "Migrate the analytics database in dev after hours for testing.",
+      "dsl": "OPS|INTENT=MIGRATE|SERVICE=\"analytics-db\"|ENV=\"dev\"|PRIORITY=MEDIUM|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"AFTER_HOURS\"|TAGS=[\"migration\",\"analytics\"]"
+    },
+    {
+      "request": "Failover the email service to the disaster recovery site immediately.",
+      "dsl": "OPS|INTENT=FAILOVER|SERVICE=\"email-service\"|ENV=\"dr\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"failover\",\"email\"]"
+    },
+    {
+      "request": "Rollback the recent changes to the billing service in production immediately.",
+      "dsl": "OPS|INTENT=ROLLBACK|SERVICE=\"billing-service\"|ENV=\"prod\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"rollback\",\"billing\"]"
+    },
+    {
+      "request": "Deploy the latest patch to the authentication service in staging after hours.",
+      "dsl": "OPS|INTENT=DEPLOY|SERVICE=\"authentication-service\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"AFTER_HOURS\"|TAGS=[\"deployment\",\"authentication\"]"
+    },
+    {
+      "request": "Scale the video processing service in production immediately due to high demand.",
+      "dsl": "OPS|INTENT=SCALE|SERVICE=\"video-processing\"|ENV=\"prod\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"scaling\",\"video\"]"
+    },
+    {
+      "request": "Restart the data pipeline in the dev environment during business hours.",
+      "dsl": "OPS|INTENT=RESTART|SERVICE=\"data-pipeline\"|ENV=\"dev\"|PRIORITY=MEDIUM|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"BUSINESS_HOURS\"|TAGS=[\"restart\",\"pipeline\"]"
+    },
+    {
+      "request": "Backup the user profiles database in production on Saturday at 0200Z.",
+      "dsl": "OPS|INTENT=BACKUP|SERVICE=\"user-profiles-db\"|ENV=\"prod\"|PRIORITY=LOW|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"MAINTENANCE_SAT_0200Z\"|TAGS=[\"backup\",\"profiles\"]"
+    },
+    {
+      "request": "Restore the backup of the order database in staging immediately.",
+      "dsl": "OPS|INTENT=RESTORE|SERVICE=\"order-db\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"restore\",\"order\"]"
+    },
+    {
+      "request": "Patch the load balancer in production immediately for performance improvements.",
+      "dsl": "OPS|INTENT=PATCH|SERVICE=\"load-balancer\"|ENV=\"prod\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"patch\",\"performance\"]"
+    },
+    {
+      "request": "Block unauthorized access attempts on the API server in dev immediately.",
+      "dsl": "OPS|INTENT=BLOCK|SERVICE=\"api-server\"|ENV=\"dev\"|PRIORITY=CRITICAL|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"security\",\"api\"]"
+    },
+    {
+      "request": "Migrate the cache database in staging after hours for optimization.",
+      "dsl": "OPS|INTENT=MIGRATE|SERVICE=\"cache-db\"|ENV=\"staging\"|PRIORITY=MEDIUM|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"AFTER_HOURS\"|TAGS=[\"migration\",\"cache\"]"
+    },
+    {
+      "request": "Failover the analytics service to the disaster recovery site immediately.",
+      "dsl": "OPS|INTENT=FAILOVER|SERVICE=\"analytics-service\"|ENV=\"dr\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"failover\",\"analytics\"]"
+    },
+    {
+      "request": "Rollback the recent changes to the notification service in dev immediately.",
+      "dsl": "OPS|INTENT=ROLLBACK|SERVICE=\"notification-service\"|ENV=\"dev\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"rollback\",\"notification\"]"
+    },
+    {
+      "request": "Deploy the latest update to the search engine in production after hours.",
+      "dsl": "OPS|INTENT=DEPLOY|SERVICE=\"search-engine\"|ENV=\"prod\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"AFTER_HOURS\"|TAGS=[\"deployment\",\"search\"]"
+    },
+    {
+      "request": "Scale the recommendation engine in staging immediately due to increased usage.",
+      "dsl": "OPS|INTENT=SCALE|SERVICE=\"recommendation-engine\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"scaling\",\"recommendation\"]"
+    },
+    {
+      "request": "Restart the backup service in the dev environment during business hours.",
+      "dsl": "OPS|INTENT=RESTART|SERVICE=\"backup-service\"|ENV=\"dev\"|PRIORITY=MEDIUM|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"BUSINESS_HOURS\"|TAGS=[\"restart\",\"backup\"]"
+    },
+    {
+      "request": "Backup the transaction logs in production on Sunday at 0100Z.",
+      "dsl": "OPS|INTENT=BACKUP|SERVICE=\"transaction-logs\"|ENV=\"prod\"|PRIORITY=LOW|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"MAINTENANCE_SUN_0100Z\"|TAGS=[\"backup\",\"transactions\"]"
+    },
+    {
+      "request": "Restore the backup of the user settings database in dev immediately.",
+      "dsl": "OPS|INTENT=RESTORE|SERVICE=\"user-settings-db\"|ENV=\"dev\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"restore\",\"settings\"]"
+    },
+    {
+      "request": "Patch the DNS server in staging immediately for security updates.",
+      "dsl": "OPS|INTENT=PATCH|SERVICE=\"dns-server\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"patch\",\"dns\"]"
+    },
+    {
+      "request": "Block unauthorized access attempts on the database server in production immediately.",
+      "dsl": "OPS|INTENT=BLOCK|SERVICE=\"database-server\"|ENV=\"prod\"|PRIORITY=CRITICAL|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"security\",\"database\"]"
+    },
+    {
+      "request": "Migrate the user profiles database in dev after hours for testing.",
+      "dsl": "OPS|INTENT=MIGRATE|SERVICE=\"user-profiles-db\"|ENV=\"dev\"|PRIORITY=MEDIUM|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"AFTER_HOURS\"|TAGS=[\"migration\",\"profiles\"]"
+    },
+    {
+      "request": "Failover the order processing service to the disaster recovery site immediately.",
+      "dsl": "OPS|INTENT=FAILOVER|SERVICE=\"order-processing\"|ENV=\"dr\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"failover\",\"order\"]"
+    },
+    {
+      "request": "Rollback the recent changes to the cache service in staging immediately.",
+      "dsl": "OPS|INTENT=ROLLBACK|SERVICE=\"cache-service\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"rollback\",\"cache\"]"
+    },
+    {
+      "request": "Deploy the latest version of the recommendation engine in dev after hours.",
+      "dsl": "OPS|INTENT=DEPLOY|SERVICE=\"recommendation-engine\"|ENV=\"dev\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"AFTER_HOURS\"|TAGS=[\"deployment\",\"recommendation\"]"
+    },
+    {
+      "request": "Scale the search indexer in production immediately due to increased traffic.",
+      "dsl": "OPS|INTENT=SCALE|SERVICE=\"search-indexer\"|ENV=\"prod\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"scaling\",\"search\"]"
+    },
+    {
+      "request": "Restart the analytics engine in the dev environment during business hours.",
+      "dsl": "OPS|INTENT=RESTART|SERVICE=\"analytics-engine\"|ENV=\"dev\"|PRIORITY=MEDIUM|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"BUSINESS_HOURS\"|TAGS=[\"restart\",\"analytics\"]"
+    },
+    {
+      "request": "Backup the configuration files in production on Saturday at 0200Z.",
+      "dsl": "OPS|INTENT=BACKUP|SERVICE=\"config-files\"|ENV=\"prod\"|PRIORITY=LOW|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"MAINTENANCE_SAT_0200Z\"|TAGS=[\"backup\",\"config\"]"
+    },
+    {
+      "request": "Restore the backup of the email database in staging immediately.",
+      "dsl": "OPS|INTENT=RESTORE|SERVICE=\"email-db\"|ENV=\"staging\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"restore\",\"email\"]"
+    },
+    {
+      "request": "Patch the web server in dev immediately for a critical update.",
+      "dsl": "OPS|INTENT=PATCH|SERVICE=\"web-server\"|ENV=\"dev\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"patch\",\"web\"]"
+    },
+    {
+      "request": "Block unauthorized access attempts on the cache server in staging immediately.",
+      "dsl": "OPS|INTENT=BLOCK|SERVICE=\"cache-server\"|ENV=\"staging\"|PRIORITY=CRITICAL|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"security\",\"cache\"]"
+    },
+    {
+      "request": "Migrate the transaction database in production after hours for performance.",
+      "dsl": "OPS|INTENT=MIGRATE|SERVICE=\"transaction-db\"|ENV=\"prod\"|PRIORITY=HIGH|APPROVAL=AUTO|NOTIFY=YES|WINDOW=\"AFTER_HOURS\"|TAGS=[\"migration\",\"transaction\"]"
+    },
+    {
+      "request": "Failover the logging service to the disaster recovery site immediately.",
+      "dsl": "OPS|INTENT=FAILOVER|SERVICE=\"logging-service\"|ENV=\"dr\"|PRIORITY=CRITICAL|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"failover\",\"logging\"]"
+    },
+    {
+      "request": "Rollback the recent changes to the web service in dev immediately.",
+      "dsl": "OPS|INTENT=ROLLBACK|SERVICE=\"web-service\"|ENV=\"dev\"|PRIORITY=HIGH|APPROVAL=MANUAL|NOTIFY=YES|WINDOW=\"IMMEDIATE\"|TAGS=[\"rollback\",\"web\"]"
+    }
+  ],
+  "valid_records_count": 50,
+  "invalid_examples": [],
+  "raw_text_path": "data\\raw\\generated_examples_raw.txt",
+  "jsonl_output_path": "data\\raw\\generated_examples.jsonl"
+}
